@@ -1,0 +1,51 @@
+id,prompt,group,shape,rule_shape,review,reason
+p1,PayPal alternatives for international payments,Choose a payment provider for your business,conquest,conquest,,Names PayPal and seeks alternatives for international payments.
+p2,Compare payment processors pricing models,Choose a payment provider for your business,category,list,word rules say list,Compares payment processor pricing models without requesting product recommendations.
+p3,Compare PayPal vs Square for small businesses,Choose a payment provider for your business,conquest,conquest,,Names tracked competitors PayPal and Square in a provider comparison.
+p4,Best payment solution for nonprofits,Choose a payment provider for your business,list,list,,Asks for the best payment solution for nonprofits.
+p5,Best payment gateway for SaaS platforms,Choose a payment provider for your business,list,list,,Asks for the best gateway for SaaS platforms.
+p6,Best gateway for high-volume marketplaces,Build marketplace payment and payout flows,list,list,,Asks for the best gateway for high-volume marketplaces.
+p7,Tokenize card data server-side,Integrate payments into a website or app,task,task,,Requests server-side card data tokenization.
+p8,Support mobile wallets in checkout,Integrate payments into a website or app,task,task,,Requests mobile wallet support in checkout.
+p9,Integrate payments API with React app,Integrate payments into a website or app,task,task,,Requests payment API integration with a React app.
+p10,Integrate mobile in-app payments,Integrate payments into a website or app,task,task,,Requests integration of mobile in-app payments.
+p11,Implement webhooks for payment events,Build marketplace payment and payout flows,task,task,,Requests implementation of payment event webhooks.
+p12,Implement server-to-server payment confirmations,Build marketplace payment and payout flows,task,task,,Requests implementation of server-side payment confirmations.
+p13,Migrate customers from another payment gateway,Integrate payments into a website or app,task,task,,Requests migration from another payment gateway.
+p14,Add payment buttons to static websites,Integrate payments into a website or app,task,task,,Requests adding payment buttons to static websites.
+p15,Add coupon codes to checkout flow,Improve checkout and manage recurring payments,task,task,,Requests adding coupon codes to checkout.
+p16,Optimize checkout conversion rates,Improve checkout and manage recurring payments,task,task,,Requests optimizing checkout conversion rates.
+p17,Securely store customer payment methods,Improve checkout and manage recurring payments,task,task,,Requests securely storing customer payment methods.
+p18,Set up recurring billing for subscriptions,Improve checkout and manage recurring payments,task,task,,Requests setting up recurring subscription billing.
+p19,Recover failed recurring payment attempts,Improve checkout and manage recurring payments,task,task,,Requests recovering failed recurring payment attempts.
+p20,Recommendations for subscription dunning management,Improve checkout and manage recurring payments,list,list,,Requests recommendations for subscription dunning management.
+p21,Verify bank account payouts,Build marketplace payment and payout flows,task,task,,Requests verification of bank accounts used for payouts.
+p22,Onboard marketplace sellers with split payouts,Build marketplace payment and payout flows,task,task,,Requests seller onboarding with split payouts.
+p23,Enable instant payouts to sellers,Build marketplace payment and payout flows,task,task,,Requests enabling instant payouts to sellers.
+p24,Set up multi-currency product pricing,Price and accept payments across currencies and regions,task,task,,Requests setup of multi-currency product pricing.
+p25,Support ACH bank transfers for US customers,Price and accept payments across currencies and regions,task,task,,Requests ACH bank transfer acceptance for US customers.
+p26,Pros and cons of dynamic currency conversion,Price and accept payments across currencies and regions,category,category,,Asks for pros and cons of a currency conversion concept.
+p27,Calculate foreign exchange conversion fees,Price and accept payments across currencies and regions,task,task,,Requests calculation of foreign exchange conversion fees.
+p28,Calculate fees for processing international cards,Price and accept payments across currencies and regions,task,task,,Requests calculation of international card processing fees.
+p29,Accept payments across Europe and Asia,Price and accept payments across currencies and regions,task,task,,Requests accepting payments across multiple regions.
+p30,Accept multiple currencies at checkout,Price and accept payments across currencies and regions,task,task,,Requests accepting multiple currencies at checkout.
+p31,Accept cryptocurrency payments on ecommerce sites,Price and accept payments across currencies and regions,task,task,,Requests accepting cryptocurrency payments on ecommerce sites.
+p32,Handle taxes and VAT at checkout,Price and accept payments across currencies and regions,task,task,,Requests handling taxes and VAT at checkout.
+p33,Store PCI-compliant logs,Meet payment security and compliance requirements,task,task,,Requests storing logs in a PCI-compliant way.
+p34,Steps to comply with PSD2 SCA,Meet payment security and compliance requirements,task,task,,Requests steps to comply with PSD2 SCA.
+p35,Required audit logs for payment compliance,Meet payment security and compliance requirements,task,category,word rules say category,Requests required audit logs for payment compliance.
+p36,PCI compliance steps for online stores,Meet payment security and compliance requirements,task,task,,Requests PCI compliance steps for online stores.
+p37,Enable strong customer authentication for EU sales,Meet payment security and compliance requirements,task,task,,Requests enabling strong customer authentication for EU sales.
+p38,How to handle chargebacks for subscriptions?,Prevent fraud and handle chargebacks,task,task,,Asks how to handle subscription chargebacks.
+p39,How to dispute a chargeback as merchant?,Prevent fraud and handle chargebacks,task,task,,Asks how a merchant can dispute a chargeback.
+p40,Mitigate fraud for high-risk merchants,Prevent fraud and handle chargebacks,task,task,,Requests fraud mitigation for high-risk merchants.
+p41,Fraud prevention for digital goods,Prevent fraud and handle chargebacks,task,category,word rules say category,Requests fraud prevention for digital goods.
+p42,Dispute timeline and evidence submission steps,Prevent fraud and handle chargebacks,task,task,,Requests dispute timelines and evidence submission steps.
+p43,Create fraud detection rules,Prevent fraud and handle chargebacks,task,task,,Requests creating fraud detection rules.
+p44,Chargeback dispute letter template,Prevent fraud and handle chargebacks,task,task,,Requests a chargeback dispute letter template.
+p45,Why is my card payment being declined?,Resolve payment issues and complete transaction follow-up,task,task,,Asks how to troubleshoot a declined card payment.
+p46,Why are webhooks retrying repeatedly?,Integrate payments into a website or app,task,task,,Asks how to troubleshoot repeatedly retrying webhooks.
+p47,Fix failed webhook signature verification,Resolve payment issues and complete transaction follow-up,task,task,,Requests fixing webhook signature verification.
+p48,Process refunds for physical product returns,Resolve payment issues and complete transaction follow-up,task,task,,Requests processing refunds for product returns.
+p49,Process partial refunds,Resolve payment issues and complete transaction follow-up,task,task,,Requests processing partial refunds.
+p50,Export transaction reports for accounting,Resolve payment issues and complete transaction follow-up,task,task,,Requests exporting transaction reports for accounting.
