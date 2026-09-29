@@ -16,7 +16,7 @@ sorting as files. This writes, into --out:
 Then get plan.json without re-sorting anything:
 
     python3 scripts/propose.py --prompts <out>/prompts.csv --brand <out>/brand.yaml \\
-        --from-shapes <out>/shapes.csv --no-llm --out <out>/proposal
+        --from-shapes <out>/shapes.csv --no-llm --report-id <id> --out <out>/proposal
 
 No model, no API key. Numbers in that plan.json are placeholders until the
 build's own pull fills them; the approved sorting is what carries over.
@@ -48,6 +48,13 @@ def main() -> int:
     D = json.loads(raw)
     if D.get("_template"):
         sys.exit("that's the empty template, not a proposal")
+    import re as _re
+    if D.get("demo") is True:
+        sys.exit("that's a demo made of made-up data; build files only come from a real Brand Radar report")
+    rid = str(D.get("report_id") or "").strip()
+    if not _re.fullmatch(r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}", rid, _re.I) \
+            or rid.lower().startswith("0190a1b2-c3d4"):
+        sys.exit("these measurements don't name a Brand Radar report (report_id); build files only come from the user's own report")
     problems = []
     for g in D.get("groups", []):
         if not g.get("name"):
@@ -97,7 +104,7 @@ def main() -> int:
     (out / "measurements.json").write_text(json.dumps(D, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"wrote {out}/prompts.csv, shapes.csv, brand.yaml, measurements.json ({len(seen)} questions, {len(D['groups'])} topics)")
     print(f"next: python3 scripts/propose.py --prompts {out}/prompts.csv --brand {out}/brand.yaml "
-          f"--from-shapes {out}/shapes.csv --no-llm --out {out}/proposal")
+          f"--from-shapes {out}/shapes.csv --no-llm --report-id {rid} --out {out}/proposal")
     return 0
 
 
