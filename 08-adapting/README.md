@@ -28,8 +28,8 @@ brand filled in. Ten seconds later you know:
 - whether your brand or a competitor is also an ordinary word
 - what the first build and each day after will cost to grade
 
-Both example sets have their output in their READMEs ([ahrefs](../examples/ahrefs/),
-[stripe](../examples/stripe/)). If the report says a question isn't answerable,
+Both case studies describe their output ([SEO tools](../10-case-studies/seo-tools.md),
+[payments](../10-case-studies/payments.md)). If the report says a question isn't answerable,
 don't build the card. A card fed by the wrong shape is worse than no card.
 
 ## 2 · Fill brand.yaml
@@ -40,9 +40,9 @@ win-rate rule and its exclusions, and whether you have a fact sheet, bot data or
 a tracked-page list. The pipeline reads it; the grader template is filled from
 it; nothing else in the repo needs to know your brand.
 
-Two filled copies to diff against: [examples/ahrefs/brand.yaml](../examples/ahrefs/brand.yaml)
-(empty disambiguation, has a fact sheet) and [examples/stripe/brand.yaml](../examples/stripe/brand.yaml)
-(two disambiguation lines, per-answer win rate, no fact sheet).
+The two case studies differ exactly here: the SEO-tools one has no
+disambiguation lines and a fact sheet; the payments one has two disambiguation
+lines ("Square" is also a word), a per-answer win rate and no fact sheet.
 
 ## 3 · Choose the grouping
 
