@@ -1,0 +1,46 @@
+# brand.yaml — everything the dashboard needs to know about YOUR brand.
+# Everything not in this file is generic: schema, metrics, cards, pipeline.
+# Two filled copies: examples/ahrefs/brand.yaml and examples/stripe/brand.yaml.
+
+brand: acme                     # lowercase, as the grader should output it
+label: Acme                     # display name
+category: widgets for small teams   # the market in the reader's words; used by the grader and scripts/propose.py
+generic_tool: a widget tool         # what an UNnamed recommendation looks like ("use an SEO tool")
+variants:                       # spellings and short forms that mean the brand
+  - acme inc
+products:                       # product names to FOLD into the brand in grading
+  - acme analytics              # ("I'd use Acme Analytics" counts as an Acme mention)
+fold_rules:                     # brand -> company mappings the grader must apply
+  - "acme analytics -> acme"
+keep_separate: []               # sub-brands you want counted on their own (e.g. a rival's acquisition)
+
+competitors:                    # the cohort for share of voice; 2–8 names
+  - rivalco
+  - otherco
+competitor_variants: []         # alternative spellings ("se ranking", "seranking")
+
+owned_domains:                  # hosts whose citations count as "owned" (subdomains included)
+  - acme.com
+competitor_domains:
+  - rivalco.com
+  - otherco.io
+ugc_domains:                    # keep or trim; used for the citation split
+  - reddit.com
+  - quora.com
+  - youtube.com
+  - medium.com
+  - g2.com
+  - capterra.com
+  - trustpilot.com
+
+disambiguation: []              # lines the grader needs when a name is also a word
+  # - "\"Square\" means Square Inc./Block's payments product, never the shape."
+  # - "\"Squarespace\" is a different company."
+
+win_rate_rule: per_prompt       # per_prompt (only prompts naming the brand) | per_answer (see 02-prompts/shapes.md)
+win_rate_exclude: []            # prompts that pit two rivals against each other
+  # - "compare paypal vs square for small businesses"
+
+fact_sheet: false               # path to an approved fact sheet, or false → question 6 is skipped
+bot_analytics: false            # bot-log source, or false → question 9 is skipped
+tracked_pages: []               # URLs for question 11; empty → skipped
