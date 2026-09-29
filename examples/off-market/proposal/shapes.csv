@@ -1,0 +1,21 @@
+id,prompt,group,shape,rule_shape,review,reason
+p1,is it safe to fly during pregnancy,Outside the market,none,category,word rules say category,Pregnancy and flying are unrelated to dental clinics.
+p2,what time does the sun set in lisbon in december,Outside the market,none,category,word rules say category,A sunset-time question is unrelated to dental clinics.
+p3,write a birthday poem for my sister,Outside the market,none,category,word rules say category,A birthday poem is a creative request unrelated to dental clinics.
+p4,dentist near me open saturday,Get help quickly for a dental problem,list,category,word rules say category,Seeks a dentist option available on Saturday.
+p5,emergency dentist for a broken tooth,Get help quickly for a dental problem,list,category,word rules say category,Seeks emergency dentist options for a broken tooth.
+p6,how much does a root canal cost without insurance,Decide which treatment to get and what it may cost,category,category,,Asks about the cost of a dental treatment.
+p7,does insurance cover dental implants,Decide which treatment to get and what it may cost,category,category,,Asks whether insurance covers implants.
+p8,best dentist in lisbon for implants,Choose and vet a dentist or implant clinic,list,list,,Asks for the best implant dentist in Lisbon.
+p9,which dental clinics in lisbon speak english,Choose and vet a dentist or implant clinic,list,list,,Asks for clinics with a specific language feature.
+p10,is teeth whitening safe,Decide which treatment to get and what it may cost,category,category,,Asks about the safety of teeth whitening.
+p11,what is the difference between a crown and a veneer,Decide which treatment to get and what it may cost,category,category,,Compares two dental treatment concepts.
+p12,how do I stop my gums bleeding,Get help quickly for a dental problem,task,task,,Asks how to address bleeding gums.
+p13,invisalign vs braces for adults,Decide which treatment to get and what it may cost,category,category,,Compares two orthodontic treatment concepts.
+p14,sorriso lisboa reviews,Choose and vet a dentist or implant clinic,branded,branded,,Names a tracked competitor and asks for reviews.
+p15,is clinica dental avenida any good,Choose and vet a dentist or implant clinic,conquest,conquest,,Names a tracked competitor and asks for an evaluation.
+p16,how long does a dental implant last,Choose and vet a dentist or implant clinic,category,category,,Asks how long dental implants typically last.
+p17,can I get a same day crown,Get help quickly for a dental problem,task,task,,Asks whether a same-day crown is possible.
+p18,what should I do if my filling falls out,Get help quickly for a dental problem,task,task,,Asks what to do about a lost filling.
+p19,who won the champions league last year,Outside the market,none,category,word rules say category,Football results are unrelated to dental clinics.
+p20,explain quantum entanglement simply,Outside the market,none,category,word rules say category,Quantum entanglement is unrelated to dental clinics.
