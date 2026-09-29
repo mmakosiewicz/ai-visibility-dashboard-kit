@@ -1,0 +1,958 @@
+{
+ "generated_at": "2026-09-29T10:29:17+00:00",
+ "brand": "sorriso lisboa",
+ "label": "Sorriso Lisboa",
+ "category": "dental clinics in Lisbon",
+ "classifier": "openai/gpt-6-luna, then reviewed",
+ "prompts": 20,
+ "shapes": {
+  "none": 5,
+  "list": 4,
+  "category": 6,
+  "task": 3,
+  "branded": 1,
+  "conquest": 1
+ },
+ "set_verdict": "partial",
+ "set_notes": "",
+ "sample": {
+  "answers": 0,
+  "days": 1,
+  "surfaces": 4,
+  "graded_now": 0,
+  "surface_list": null,
+  "expected": null,
+  "cited_flag": null
+ },
+ "fact_sheet": false,
+ "groups": [
+  {
+   "name": "Outside the market",
+   "description": "",
+   "prompts": [
+    "p1",
+    "p2",
+    "p3",
+    "p19",
+    "p20"
+   ],
+   "n_prompts": 5,
+   "shape_mix": {
+    "none": 5
+   },
+   "dominant_shape": "none",
+   "mixed": false,
+   "sample_answers": 0,
+   "headline": null,
+   "metrics": [
+    {
+     "id": "owned_citation_share",
+     "label": "Owned-citation share",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "How often Sorriso Lisboa's website is a source",
+      "what": "Of all the websites AI cites as sources (each counted once per answer), the share that are Sorriso Lisboa's own.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Owned citation share",
+       "formula": "cited websites that are Sorriso Lisboa's ÷ all cited websites (each counted once per answer)",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "citation_split",
+     "label": "Citation split",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "no confirmed citations",
+     "split": {},
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "Whose websites AI uses as sources",
+      "what": "Sources split into Sorriso Lisboa's site, competitors' sites, forums and everyone else.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Citation split",
+       "formula": "cited websites in each group ÷ all cited websites (each counted once per answer)",
+       "worked": "no cited websites in the sample"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "Get help quickly for a dental problem",
+   "description": "",
+   "prompts": [
+    "p4",
+    "p5",
+    "p12",
+    "p17",
+    "p18"
+   ],
+   "n_prompts": 5,
+   "shape_mix": {
+    "list": 2,
+    "task": 3
+   },
+   "dominant_shape": "task",
+   "mixed": false,
+   "sample_answers": 0,
+   "headline": null,
+   "metrics": [
+    {
+     "id": "mention_rate",
+     "label": "Mention rate",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/README.md#mention-rate",
+     "plain": {
+      "name": "How often Sorriso Lisboa is named",
+      "what": "Out of all answers, how many name Sorriso Lisboa in the text (a link to its site alone doesn't count).",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Mention rate",
+       "formula": "answers that name Sorriso Lisboa ÷ all answers",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "position",
+     "label": "Avg position (when mentioned)",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How early Sorriso Lisboa is named",
+      "what": "When Sorriso Lisboa is mentioned, where it comes in the list of names. 1 = named first.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Average position",
+       "formula": "sum of Sorriso Lisboa's rank in each answer ÷ answers that name Sorriso Lisboa",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "top_three_rate",
+     "label": "Top-three rate (when mentioned)",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How often Sorriso Lisboa is in the top three",
+      "what": "When Sorriso Lisboa is mentioned, how often it's one of the first three names.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Top-three rate",
+       "formula": "answers with Sorriso Lisboa ranked 1–3 ÷ answers that name Sorriso Lisboa",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "win_rate",
+     "label": "Win rate",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 2,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/win-rate.md",
+     "plain": {
+      "name": "How often Sorriso Lisboa is the top pick",
+      "what": "When an answer picks one clear winner, how often that winner is Sorriso Lisboa.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Win rate",
+       "formula": "answers whose single winner is Sorriso Lisboa ÷ answers that name Sorriso Lisboa and pick one winner",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "capture",
+     "label": "Capture",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "Sorriso Lisboa's share of recommendations",
+      "what": "When an answer recommends someone specific, how often that includes Sorriso Lisboa.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Capture",
+       "formula": "answers that recommend Sorriso Lisboa ÷ answers that recommend any specific brand or organization",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "tool_recommendation_rate",
+     "label": "Tool-recommendation rate",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 3,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "How often anyone gets recommended",
+      "what": "How many answers recommend a specific brand or organization at all. Low means AI just gives information.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Recommendation rate",
+       "formula": "answers that recommend a specific brand or organization ÷ all answers",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "cohort_sov",
+     "label": "Cohort share of voice",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/share-of-voice.md",
+     "plain": {
+      "name": "Sorriso Lisboa vs. competitors",
+      "what": "Of all mentions of Sorriso Lisboa and its tracked competitors, the share that are Sorriso Lisboa.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Share of voice (vs. tracked competitors)",
+       "formula": "mentions of Sorriso Lisboa ÷ mentions of Sorriso Lisboa + tracked competitors",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "negative_rate",
+     "label": "Negative rate (negative + mixed)",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 2,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/sentiment.md",
+     "plain": {
+      "name": "How often AI is critical of Sorriso Lisboa",
+      "what": "When Sorriso Lisboa is mentioned, how often the answer is negative or mixed about it.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Negative rate",
+       "formula": "answers negative or mixed about Sorriso Lisboa ÷ answers that name Sorriso Lisboa",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "owned_citation_share",
+     "label": "Owned-citation share",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "How often Sorriso Lisboa's website is a source",
+      "what": "Of all the websites AI cites as sources (each counted once per answer), the share that are Sorriso Lisboa's own.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Owned citation share",
+       "formula": "cited websites that are Sorriso Lisboa's ÷ all cited websites (each counted once per answer)",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "citation_split",
+     "label": "Citation split",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "no confirmed citations",
+     "split": {},
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "Whose websites AI uses as sources",
+      "what": "Sources split into Sorriso Lisboa's site, competitors' sites, forums and everyone else.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Citation split",
+       "formula": "cited websites in each group ÷ all cited websites (each counted once per answer)",
+       "worked": "no cited websites in the sample"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "Decide which treatment to get and what it may cost",
+   "description": "",
+   "prompts": [
+    "p6",
+    "p7",
+    "p10",
+    "p11",
+    "p13"
+   ],
+   "n_prompts": 5,
+   "shape_mix": {
+    "category": 5
+   },
+   "dominant_shape": "category",
+   "mixed": false,
+   "sample_answers": 0,
+   "headline": null,
+   "metrics": [
+    {
+     "id": "mention_rate",
+     "label": "Mention rate",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "unprompted: nobody asked for an organisation. Near 0 for software brands; for a charity or information resource, being named here may be the point",
+     "doc": "04-metrics/README.md#mention-rate",
+     "plain": {
+      "name": "How often Sorriso Lisboa is named",
+      "what": "Out of all answers, how many name Sorriso Lisboa in the text (a link to its site alone doesn't count).",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Mention rate",
+       "formula": "answers that name Sorriso Lisboa ÷ all answers",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "capture",
+     "label": "Capture",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "Sorriso Lisboa's share of recommendations",
+      "what": "When an answer recommends someone specific, how often that includes Sorriso Lisboa.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Capture",
+       "formula": "answers that recommend Sorriso Lisboa ÷ answers that recommend any specific brand or organization",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "tool_recommendation_rate",
+     "label": "Tool-recommendation rate",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "How often anyone gets recommended",
+      "what": "How many answers recommend a specific brand or organization at all. Low means AI just gives information.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Recommendation rate",
+       "formula": "answers that recommend a specific brand or organization ÷ all answers",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "owned_citation_share",
+     "label": "Owned-citation share",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "How often Sorriso Lisboa's website is a source",
+      "what": "Of all the websites AI cites as sources (each counted once per answer), the share that are Sorriso Lisboa's own.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Owned citation share",
+       "formula": "cited websites that are Sorriso Lisboa's ÷ all cited websites (each counted once per answer)",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "citation_split",
+     "label": "Citation split",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "no confirmed citations",
+     "split": {},
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "Whose websites AI uses as sources",
+      "what": "Sources split into Sorriso Lisboa's site, competitors' sites, forums and everyone else.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Citation split",
+       "formula": "cited websites in each group ÷ all cited websites (each counted once per answer)",
+       "worked": "no cited websites in the sample"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "Choose and vet a dentist or implant clinic",
+   "description": "",
+   "prompts": [
+    "p8",
+    "p9",
+    "p14",
+    "p15",
+    "p16"
+   ],
+   "n_prompts": 5,
+   "shape_mix": {
+    "list": 2,
+    "branded": 1,
+    "conquest": 1,
+    "category": 1
+   },
+   "dominant_shape": "list",
+   "mixed": true,
+   "sample_answers": 0,
+   "headline": null,
+   "metrics": [
+    {
+     "id": "mention_rate",
+     "label": "Mention rate",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/README.md#mention-rate",
+     "plain": {
+      "name": "How often Sorriso Lisboa is named",
+      "what": "Out of all answers, how many name Sorriso Lisboa in the text (a link to its site alone doesn't count).",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Mention rate",
+       "formula": "answers that name Sorriso Lisboa ÷ all answers",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "position",
+     "label": "Avg position (when mentioned)",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 3,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How early Sorriso Lisboa is named",
+      "what": "When Sorriso Lisboa is mentioned, where it comes in the list of names. 1 = named first.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Average position",
+       "formula": "sum of Sorriso Lisboa's rank in each answer ÷ answers that name Sorriso Lisboa",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "top_three_rate",
+     "label": "Top-three rate (when mentioned)",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 3,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How often Sorriso Lisboa is in the top three",
+      "what": "When Sorriso Lisboa is mentioned, how often it's one of the first three names.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Top-three rate",
+       "formula": "answers with Sorriso Lisboa ranked 1–3 ÷ answers that name Sorriso Lisboa",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "win_rate",
+     "label": "Win rate",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 3,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "only answers whose verdict is in a comparison with you (per-answer rule)",
+     "doc": "04-metrics/win-rate.md",
+     "plain": {
+      "name": "How often Sorriso Lisboa is the top pick",
+      "what": "When an answer picks one clear winner, how often that winner is Sorriso Lisboa.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Win rate",
+       "formula": "answers whose single winner is Sorriso Lisboa ÷ answers that name Sorriso Lisboa and pick one winner",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "capture",
+     "label": "Capture",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 4,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "Sorriso Lisboa's share of recommendations",
+      "what": "When an answer recommends someone specific, how often that includes Sorriso Lisboa.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Capture",
+       "formula": "answers that recommend Sorriso Lisboa ÷ answers that recommend any specific brand or organization",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "tool_recommendation_rate",
+     "label": "Tool-recommendation rate",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 1,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "How often anyone gets recommended",
+      "what": "How many answers recommend a specific brand or organization at all. Low means AI just gives information.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Recommendation rate",
+       "formula": "answers that recommend a specific brand or organization ÷ all answers",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "cohort_sov",
+     "label": "Cohort share of voice",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 3,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/share-of-voice.md",
+     "plain": {
+      "name": "Sorriso Lisboa vs. competitors",
+      "what": "Of all mentions of Sorriso Lisboa and its tracked competitors, the share that are Sorriso Lisboa.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Share of voice (vs. tracked competitors)",
+       "formula": "mentions of Sorriso Lisboa ÷ mentions of Sorriso Lisboa + tracked competitors",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "negative_rate",
+     "label": "Negative rate (negative + mixed)",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 4,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/sentiment.md",
+     "plain": {
+      "name": "How often AI is critical of Sorriso Lisboa",
+      "what": "When Sorriso Lisboa is mentioned, how often the answer is negative or mixed about it.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Negative rate",
+       "formula": "answers negative or mixed about Sorriso Lisboa ÷ answers that name Sorriso Lisboa",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "fact_accuracy",
+     "label": "Wrong-claim rate",
+     "verdict": "unavailable",
+     "why": "needs an approved fact sheet (brand.yaml fact_sheet)",
+     "applies_to": 1,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/accuracy.md",
+     "plain": {
+      "name": "How often AI gets facts about Sorriso Lisboa wrong",
+      "what": "Checks claims in answers against a list of verified facts.",
+      "status": "Can't measure yet",
+      "reason": "Needs a list of verified facts about Sorriso Lisboa to check answers against.",
+      "calculation": {
+       "tech": "Wrong-claim rate",
+       "formula": "claims about Sorriso Lisboa that contradict the fact list ÷ claims that can be checked",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "owned_citation_share",
+     "label": "Owned-citation share",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "How often Sorriso Lisboa's website is a source",
+      "what": "Of all the websites AI cites as sources (each counted once per answer), the share that are Sorriso Lisboa's own.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Owned citation share",
+       "formula": "cited websites that are Sorriso Lisboa's ÷ all cited websites (each counted once per answer)",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "citation_split",
+     "label": "Citation split",
+     "verdict": "unavailable",
+     "why": "no graded sample answers for these prompts",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "no confirmed citations",
+     "split": {},
+     "looked_at": 0,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "Whose websites AI uses as sources",
+      "what": "Sources split into Sorriso Lisboa's site, competitors' sites, forums and everyone else.",
+      "status": "Can't measure yet",
+      "reason": "No real answers loaded for these questions yet.",
+      "calculation": {
+       "tech": "Citation split",
+       "formula": "cited websites in each group ÷ all cited websites (each counted once per answer)",
+       "worked": "no cited websites in the sample"
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "unmet_needs": [],
+ "questions": {
+  "1 head-to-head": false,
+  "2 category list": true,
+  "3 sub-niches": false,
+  "4 task recommendations": false,
+  "5 source influence": true,
+  "6 fact fidelity": false,
+  "7 narrative risk": false,
+  "8 adjacent categories": false,
+  "9 crawl health": false,
+  "10 citation freshness": true,
+  "11 tracked pages": false,
+  "12 citation attention": true
+ },
+ "warnings": [
+  "Mixed-shape groups: Choose and vet a dentist or implant clinic. Each metric is computed only on the prompts whose shape allows it (see 'applies to').",
+  "7 of 20 prompts flagged for review in shapes.csv (model and word rules disagree, or a brand name overrode the model).",
+  "No sample answers: verdicts are all 'unavailable'. Export 1–2 days from Brand Radar and re-run with --answers."
+ ],
+ "plain": {
+  "fit": "Partly measurable",
+  "fit_text": "A good share of questions can't be measured beyond which websites AI cites. Build the topics that have a main number and skip the rest.",
+  "notes": [
+   "7 of 20 questions were hard to sort. They're marked ⚠ in each topic's question list and are worth a quick look.",
+   "No real AI answers have been loaded yet, so nothing could be checked. Every number below reads “can't measure yet”."
+  ]
+ }
+}
