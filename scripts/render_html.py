@@ -59,7 +59,8 @@ def measurements(plan: dict, rows: list[dict]) -> dict:
         groups.append({"name": g["name"], "description": g.get("description", ""), "questions": qs, "metrics": ms})
     s = plan["sample"]
     return {
-        "brand": B, "generated": plan["generated_at"][:10], "classifier": plan["classifier"],
+        "brand": B, "report_id": plan.get("report_id"), "demo": plan.get("demo") or None,
+        "generated": plan["generated_at"][:10], "classifier": plan["classifier"],
         "surfaces": s.get("surface_list") or ["?"] * s.get("surfaces", 4), "days": s["days"],
         "answers": s["answers"], "answers_expected": s.get("expected"),
         "cited_flag": s.get("cited_flag", False if any("cited` flag" in w for w in plan.get("warnings", [])) else None),
