@@ -1,0 +1,57 @@
+brand: stripe
+category: online payments
+generic_tool: a payment gateway
+label: Stripe
+variants: []
+products:
+  - stripe payments
+  - stripe checkout
+  - stripe elements
+  - stripe billing
+  - stripe connect
+  - stripe radar
+  - stripe terminal
+  - stripe tax
+  - stripe link
+  - stripe atlas
+  - stripe sigma
+  - stripe identity
+  - stripe treasury
+fold_rules:
+  - "stripe billing -> stripe"
+  - "square online -> square"
+  - "square reader -> square"
+keep_separate:
+  - braintree          # PayPal-owned, but recommended as its own product
+  - venmo
+competitors:
+  - paypal
+  - square
+competitor_variants: []
+owned_domains:
+  - stripe.com
+  - stripe.dev
+competitor_domains:
+  - paypal.com
+  - braintreepayments.com
+  - squareup.com
+  - square.com
+ugc_domains:
+  - reddit.com
+  - quora.com
+  - youtube.com
+  - medium.com
+  - g2.com
+  - capterra.com
+  - trustpilot.com
+  - news.ycombinator.com
+disambiguation:
+  - "\"Square\" means Square Inc. / Block's payments product (Square Online, Square Reader, Square Terminal), never the shape or \"square footage\"."
+  - "\"Squarespace\" is a different company; never fold it into Square."
+  - "\"Stripe\" is the payments company; ignore stripes, striped, Stripe as a texture."
+win_rate_rule: per_answer
+win_rate_exclude:
+  - "compare paypal vs square for small businesses"
+fact_sheet: false
+bot_analytics: false
+tracked_pages: []
