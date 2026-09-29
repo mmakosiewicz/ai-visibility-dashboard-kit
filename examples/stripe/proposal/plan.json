@@ -1,0 +1,2313 @@
+{
+ "generated_at": "2026-09-29T10:29:17+00:00",
+ "brand": "stripe",
+ "label": "Stripe",
+ "category": "online payments",
+ "classifier": "openai/gpt-6-luna, then reviewed",
+ "prompts": 50,
+ "shapes": {
+  "conquest": 2,
+  "category": 2,
+  "list": 4,
+  "task": 42
+ },
+ "set_verdict": "full",
+ "set_notes": "",
+ "sample": {
+  "answers": 600,
+  "days": 2,
+  "surfaces": 6,
+  "graded_now": 0,
+  "surface_list": [
+   "chatgpt",
+   "copilot",
+   "gemini",
+   "google_ai_mode",
+   "google_ai_overviews",
+   "perplexity"
+  ],
+  "expected": null,
+  "cited_flag": true
+ },
+ "fact_sheet": false,
+ "groups": [
+  {
+   "name": "Choose a payment provider for your business",
+   "description": "",
+   "prompts": [
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5"
+   ],
+   "n_prompts": 5,
+   "shape_mix": {
+    "conquest": 2,
+    "category": 1,
+    "list": 2
+   },
+   "dominant_shape": "conquest",
+   "mixed": true,
+   "sample_answers": 60,
+   "headline": "mention_rate",
+   "metrics": [
+    {
+     "id": "mention_rate",
+     "label": "Mention rate",
+     "verdict": "keep",
+     "why": "≈210/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 44,
+      "den": 60,
+      "value": "73%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/README.md#mention-rate",
+     "plain": {
+      "name": "How often Stripe is named",
+      "what": "Out of all answers, how many name Stripe in the text (a link to its site alone doesn't count).",
+      "status": "Worth tracking",
+      "reason": "About 210 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Mention rate",
+       "formula": "answers that name Stripe ÷ all answers",
+       "worked": "44 ÷ 60 = 73%"
+      }
+     }
+    },
+    {
+     "id": "position",
+     "label": "Avg position (when mentioned)",
+     "verdict": "thin",
+     "why": "only 4 prompt(s) in this group have a shape this metric fits",
+     "applies_to": 4,
+     "of": 5,
+     "sample": {
+      "num": 100,
+      "den": 35,
+      "value": "2.9"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 48,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How early Stripe is named",
+      "what": "When Stripe is mentioned, where it comes in the list of names. 1 = named first.",
+      "status": "Too little data",
+      "reason": "Only 4 questions in this topic suit this, too few to be reliable.",
+      "calculation": {
+       "tech": "Average position",
+       "formula": "sum of Stripe's rank in each answer ÷ answers that name Stripe",
+       "worked": "100 ÷ 35 = 2.9"
+      }
+     }
+    },
+    {
+     "id": "top_three_rate",
+     "label": "Top-three rate (when mentioned)",
+     "verdict": "thin",
+     "why": "only 4 prompt(s) in this group have a shape this metric fits",
+     "applies_to": 4,
+     "of": 5,
+     "sample": {
+      "num": 25,
+      "den": 35,
+      "value": "71%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 48,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How often Stripe is in the top three",
+      "what": "When Stripe is mentioned, how often it's one of the first three names.",
+      "status": "Too little data",
+      "reason": "Only 4 questions in this topic suit this, too few to be reliable.",
+      "calculation": {
+       "tech": "Top-three rate",
+       "formula": "answers with Stripe ranked 1–3 ÷ answers that name Stripe",
+       "worked": "25 ÷ 35 = 71%"
+      }
+     }
+    },
+    {
+     "id": "win_rate",
+     "label": "Win rate",
+     "verdict": "thin",
+     "why": "only 2 prompt(s) in this group have a shape this metric fits",
+     "applies_to": 2,
+     "of": 5,
+     "sample": {
+      "num": 10,
+      "den": 11,
+      "value": "91%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 24,
+     "note": "",
+     "doc": "04-metrics/win-rate.md",
+     "plain": {
+      "name": "How often Stripe is the top pick",
+      "what": "When an answer picks one clear winner, how often that winner is Stripe.",
+      "status": "Too little data",
+      "reason": "Only 2 questions in this topic suit this, too few to be reliable.",
+      "calculation": {
+       "tech": "Win rate",
+       "formula": "answers whose single winner is Stripe ÷ answers that name Stripe and pick one winner",
+       "worked": "10 ÷ 11 = 91%"
+      }
+     }
+    },
+    {
+     "id": "capture",
+     "label": "Capture",
+     "verdict": "keep",
+     "why": "≈168/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 34,
+      "den": 48,
+      "value": "71%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "Stripe's share of recommendations",
+      "what": "When an answer recommends someone specific, how often that includes Stripe.",
+      "status": "Worth tracking",
+      "reason": "About 168 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Capture",
+       "formula": "answers that recommend Stripe ÷ answers that recommend any specific brand or organization",
+       "worked": "34 ÷ 48 = 71%"
+      }
+     }
+    },
+    {
+     "id": "tool_recommendation_rate",
+     "label": "Tool-recommendation rate",
+     "verdict": "thin",
+     "why": "only 1 prompt(s) in this group have a shape this metric fits",
+     "applies_to": 1,
+     "of": 5,
+     "sample": {
+      "num": 1,
+      "den": 12,
+      "value": "8%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 12,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "How often anyone gets recommended",
+      "what": "How many answers recommend a specific brand or organization at all. Low means AI just gives information.",
+      "status": "Too little data",
+      "reason": "Only 1 question in this topic suits this, too few to be reliable.",
+      "calculation": {
+       "tech": "Recommendation rate",
+       "formula": "answers that recommend a specific brand or organization ÷ all answers",
+       "worked": "1 ÷ 12 = 8%"
+      }
+     }
+    },
+    {
+     "id": "cohort_sov",
+     "label": "Cohort share of voice",
+     "verdict": "thin",
+     "why": "only 4 prompt(s) in this group have a shape this metric fits",
+     "applies_to": 4,
+     "of": 5,
+     "sample": {
+      "num": 35,
+      "den": 94,
+      "value": "37%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 48,
+     "note": "",
+     "doc": "04-metrics/share-of-voice.md",
+     "plain": {
+      "name": "Stripe vs. competitors",
+      "what": "Of all mentions of Stripe and its tracked competitors, the share that are Stripe.",
+      "status": "Too little data",
+      "reason": "Only 4 questions in this topic suit this, too few to be reliable.",
+      "calculation": {
+       "tech": "Share of voice (vs. tracked competitors)",
+       "formula": "mentions of Stripe ÷ mentions of Stripe + tracked competitors",
+       "worked": "35 ÷ 94 = 37%"
+      }
+     }
+    },
+    {
+     "id": "negative_rate",
+     "label": "Negative rate (negative + mixed)",
+     "verdict": "thin",
+     "why": "only 4 prompt(s) in this group have a shape this metric fits",
+     "applies_to": 4,
+     "of": 5,
+     "sample": {
+      "num": 12,
+      "den": 35,
+      "value": "34%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 48,
+     "note": "",
+     "doc": "04-metrics/sentiment.md",
+     "plain": {
+      "name": "How often AI is critical of Stripe",
+      "what": "When Stripe is mentioned, how often the answer is negative or mixed about it.",
+      "status": "Too little data",
+      "reason": "Only 4 questions in this topic suit this, too few to be reliable.",
+      "calculation": {
+       "tech": "Negative rate",
+       "formula": "answers negative or mixed about Stripe ÷ answers that name Stripe",
+       "worked": "12 ÷ 35 = 34%"
+      }
+     }
+    },
+    {
+     "id": "owned_citation_share",
+     "label": "Owned-citation share",
+     "verdict": "keep",
+     "why": "≈822/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 7,
+      "den": 235,
+      "value": "3%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "How often Stripe's website is a source",
+      "what": "Of all the websites AI cites as sources (each counted once per answer), the share that are Stripe's own.",
+      "status": "Worth tracking",
+      "reason": "About 822 cited websites a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Owned citation share",
+       "formula": "cited websites that are Stripe's ÷ all cited websites (each counted once per answer)",
+       "worked": "7 ÷ 235 = 3%"
+      }
+     }
+    },
+    {
+     "id": "citation_split",
+     "label": "Citation split",
+     "verdict": "keep",
+     "why": "≈822/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 7,
+      "den": 235,
+      "value": "—"
+     },
+     "detail": "third-party 81% · ugc 10% · competitor 5% · owned 2%",
+     "split": {
+      "third-party": 191,
+      "ugc": 25,
+      "owned": 7,
+      "competitor": 12
+     },
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "Whose websites AI uses as sources",
+      "what": "Sources split into Stripe's site, competitors' sites, forums and everyone else.",
+      "status": "Worth tracking",
+      "reason": "About 822 cited websites a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Citation split",
+       "formula": "cited websites in each group ÷ all cited websites (each counted once per answer)",
+       "worked": "everyone else 81%, forums & social 10%, competitors' sites 5%, Stripe's site 2% of 235 cited websites"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "Build marketplace payment and payout flows",
+   "description": "",
+   "prompts": [
+    "p6",
+    "p11",
+    "p12",
+    "p21",
+    "p22",
+    "p23"
+   ],
+   "n_prompts": 6,
+   "shape_mix": {
+    "list": 1,
+    "task": 5
+   },
+   "dominant_shape": "task",
+   "mixed": false,
+   "sample_answers": 72,
+   "headline": "capture",
+   "metrics": [
+    {
+     "id": "mention_rate",
+     "label": "Mention rate",
+     "verdict": "keep",
+     "why": "≈252/week in the denominator at full volume",
+     "applies_to": 6,
+     "of": 6,
+     "sample": {
+      "num": 67,
+      "den": 72,
+      "value": "93%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 72,
+     "note": "",
+     "doc": "04-metrics/README.md#mention-rate",
+     "plain": {
+      "name": "How often Stripe is named",
+      "what": "Out of all answers, how many name Stripe in the text (a link to its site alone doesn't count).",
+      "status": "Worth tracking",
+      "reason": "About 252 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Mention rate",
+       "formula": "answers that name Stripe ÷ all answers",
+       "worked": "67 ÷ 72 = 93%"
+      }
+     }
+    },
+    {
+     "id": "position",
+     "label": "Avg position (when mentioned)",
+     "verdict": "keep",
+     "why": "≈234/week in the denominator at full volume",
+     "applies_to": 6,
+     "of": 6,
+     "sample": {
+      "num": 104,
+      "den": 67,
+      "value": "1.6"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 72,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How early Stripe is named",
+      "what": "When Stripe is mentioned, where it comes in the list of names. 1 = named first.",
+      "status": "Worth tracking",
+      "reason": "About 234 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Average position",
+       "formula": "sum of Stripe's rank in each answer ÷ answers that name Stripe",
+       "worked": "104 ÷ 67 = 1.6"
+      }
+     }
+    },
+    {
+     "id": "top_three_rate",
+     "label": "Top-three rate (when mentioned)",
+     "verdict": "keep",
+     "why": "≈234/week in the denominator at full volume",
+     "applies_to": 6,
+     "of": 6,
+     "sample": {
+      "num": 63,
+      "den": 67,
+      "value": "94%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 72,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How often Stripe is in the top three",
+      "what": "When Stripe is mentioned, how often it's one of the first three names.",
+      "status": "Worth tracking",
+      "reason": "About 234 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Top-three rate",
+       "formula": "answers with Stripe ranked 1–3 ÷ answers that name Stripe",
+       "worked": "63 ÷ 67 = 94%"
+      }
+     }
+    },
+    {
+     "id": "win_rate",
+     "label": "Win rate",
+     "verdict": "thin",
+     "why": "only 1 prompt(s) in this group have a shape this metric fits",
+     "applies_to": 1,
+     "of": 6,
+     "sample": {
+      "num": 5,
+      "den": 6,
+      "value": "83%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 12,
+     "note": "",
+     "doc": "04-metrics/win-rate.md",
+     "plain": {
+      "name": "How often Stripe is the top pick",
+      "what": "When an answer picks one clear winner, how often that winner is Stripe.",
+      "status": "Too little data",
+      "reason": "Only 1 question in this topic suits this, too few to be reliable.",
+      "calculation": {
+       "tech": "Win rate",
+       "formula": "answers whose single winner is Stripe ÷ answers that name Stripe and pick one winner",
+       "worked": "5 ÷ 6 = 83%"
+      }
+     }
+    },
+    {
+     "id": "capture",
+     "label": "Capture",
+     "verdict": "keep",
+     "why": "≈150/week in the denominator at full volume",
+     "applies_to": 6,
+     "of": 6,
+     "sample": {
+      "num": 41,
+      "den": 43,
+      "value": "95%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 72,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "Stripe's share of recommendations",
+      "what": "When an answer recommends someone specific, how often that includes Stripe.",
+      "status": "Worth tracking",
+      "reason": "About 150 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Capture",
+       "formula": "answers that recommend Stripe ÷ answers that recommend any specific brand or organization",
+       "worked": "41 ÷ 43 = 95%"
+      }
+     }
+    },
+    {
+     "id": "tool_recommendation_rate",
+     "label": "Tool-recommendation rate",
+     "verdict": "keep",
+     "why": "≈210/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 6,
+     "sample": {
+      "num": 31,
+      "den": 60,
+      "value": "52%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "How often anyone gets recommended",
+      "what": "How many answers recommend a specific brand or organization at all. Low means AI just gives information.",
+      "status": "Worth tracking",
+      "reason": "About 210 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Recommendation rate",
+       "formula": "answers that recommend a specific brand or organization ÷ all answers",
+       "worked": "31 ÷ 60 = 52%"
+      }
+     }
+    },
+    {
+     "id": "cohort_sov",
+     "label": "Cohort share of voice",
+     "verdict": "keep",
+     "why": "≈410/week in the denominator at full volume",
+     "applies_to": 6,
+     "of": 6,
+     "sample": {
+      "num": 67,
+      "den": 117,
+      "value": "57%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 72,
+     "note": "",
+     "doc": "04-metrics/share-of-voice.md",
+     "plain": {
+      "name": "Stripe vs. competitors",
+      "what": "Of all mentions of Stripe and its tracked competitors, the share that are Stripe.",
+      "status": "Worth tracking",
+      "reason": "About 410 brand mentions a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Share of voice (vs. tracked competitors)",
+       "formula": "mentions of Stripe ÷ mentions of Stripe + tracked competitors",
+       "worked": "67 ÷ 117 = 57%"
+      }
+     }
+    },
+    {
+     "id": "negative_rate",
+     "label": "Negative rate (negative + mixed)",
+     "verdict": "thin",
+     "why": "only 1 prompt(s) in this group have a shape this metric fits",
+     "applies_to": 1,
+     "of": 6,
+     "sample": {
+      "num": 4,
+      "den": 12,
+      "value": "33%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 12,
+     "note": "",
+     "doc": "04-metrics/sentiment.md",
+     "plain": {
+      "name": "How often AI is critical of Stripe",
+      "what": "When Stripe is mentioned, how often the answer is negative or mixed about it.",
+      "status": "Too little data",
+      "reason": "Only 1 question in this topic suits this, too few to be reliable.",
+      "calculation": {
+       "tech": "Negative rate",
+       "formula": "answers negative or mixed about Stripe ÷ answers that name Stripe",
+       "worked": "4 ÷ 12 = 33%"
+      }
+     }
+    },
+    {
+     "id": "owned_citation_share",
+     "label": "Owned-citation share",
+     "verdict": "keep",
+     "why": "≈623/week in the denominator at full volume",
+     "applies_to": 6,
+     "of": 6,
+     "sample": {
+      "num": 34,
+      "den": 178,
+      "value": "19%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 72,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "How often Stripe's website is a source",
+      "what": "Of all the websites AI cites as sources (each counted once per answer), the share that are Stripe's own.",
+      "status": "Worth tracking",
+      "reason": "About 623 cited websites a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Owned citation share",
+       "formula": "cited websites that are Stripe's ÷ all cited websites (each counted once per answer)",
+       "worked": "34 ÷ 178 = 19%"
+      }
+     }
+    },
+    {
+     "id": "citation_split",
+     "label": "Citation split",
+     "verdict": "keep",
+     "why": "≈623/week in the denominator at full volume",
+     "applies_to": 6,
+     "of": 6,
+     "sample": {
+      "num": 34,
+      "den": 178,
+      "value": "—"
+     },
+     "detail": "third-party 71% · owned 19% · ugc 5% · competitor 3%",
+     "split": {
+      "third-party": 128,
+      "ugc": 10,
+      "owned": 34,
+      "competitor": 6
+     },
+     "looked_at": 72,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "Whose websites AI uses as sources",
+      "what": "Sources split into Stripe's site, competitors' sites, forums and everyone else.",
+      "status": "Worth tracking",
+      "reason": "About 623 cited websites a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Citation split",
+       "formula": "cited websites in each group ÷ all cited websites (each counted once per answer)",
+       "worked": "everyone else 71%, Stripe's site 19%, forums & social 5%, competitors' sites 3% of 178 cited websites"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "Integrate payments into a website or app",
+   "description": "",
+   "prompts": [
+    "p7",
+    "p8",
+    "p9",
+    "p10",
+    "p13",
+    "p14",
+    "p46"
+   ],
+   "n_prompts": 7,
+   "shape_mix": {
+    "task": 7
+   },
+   "dominant_shape": "task",
+   "mixed": false,
+   "sample_answers": 84,
+   "headline": "capture",
+   "metrics": [
+    {
+     "id": "mention_rate",
+     "label": "Mention rate",
+     "verdict": "keep",
+     "why": "≈294/week in the denominator at full volume",
+     "applies_to": 7,
+     "of": 7,
+     "sample": {
+      "num": 71,
+      "den": 84,
+      "value": "85%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 84,
+     "note": "",
+     "doc": "04-metrics/README.md#mention-rate",
+     "plain": {
+      "name": "How often Stripe is named",
+      "what": "Out of all answers, how many name Stripe in the text (a link to its site alone doesn't count).",
+      "status": "Worth tracking",
+      "reason": "About 294 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Mention rate",
+       "formula": "answers that name Stripe ÷ all answers",
+       "worked": "71 ÷ 84 = 85%"
+      }
+     }
+    },
+    {
+     "id": "position",
+     "label": "Avg position (when mentioned)",
+     "verdict": "keep",
+     "why": "≈248/week in the denominator at full volume",
+     "applies_to": 7,
+     "of": 7,
+     "sample": {
+      "num": 136,
+      "den": 71,
+      "value": "1.9"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 84,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How early Stripe is named",
+      "what": "When Stripe is mentioned, where it comes in the list of names. 1 = named first.",
+      "status": "Worth tracking",
+      "reason": "About 248 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Average position",
+       "formula": "sum of Stripe's rank in each answer ÷ answers that name Stripe",
+       "worked": "136 ÷ 71 = 1.9"
+      }
+     }
+    },
+    {
+     "id": "top_three_rate",
+     "label": "Top-three rate (when mentioned)",
+     "verdict": "keep",
+     "why": "≈248/week in the denominator at full volume",
+     "applies_to": 7,
+     "of": 7,
+     "sample": {
+      "num": 63,
+      "den": 71,
+      "value": "89%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 84,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How often Stripe is in the top three",
+      "what": "When Stripe is mentioned, how often it's one of the first three names.",
+      "status": "Worth tracking",
+      "reason": "About 248 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Top-three rate",
+       "formula": "answers with Stripe ranked 1–3 ÷ answers that name Stripe",
+       "worked": "63 ÷ 71 = 89%"
+      }
+     }
+    },
+    {
+     "id": "capture",
+     "label": "Capture",
+     "verdict": "keep",
+     "why": "≈203/week in the denominator at full volume",
+     "applies_to": 7,
+     "of": 7,
+     "sample": {
+      "num": 44,
+      "den": 58,
+      "value": "76%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 84,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "Stripe's share of recommendations",
+      "what": "When an answer recommends someone specific, how often that includes Stripe.",
+      "status": "Worth tracking",
+      "reason": "About 203 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Capture",
+       "formula": "answers that recommend Stripe ÷ answers that recommend any specific brand or organization",
+       "worked": "44 ÷ 58 = 76%"
+      }
+     }
+    },
+    {
+     "id": "tool_recommendation_rate",
+     "label": "Tool-recommendation rate",
+     "verdict": "keep",
+     "why": "≈294/week in the denominator at full volume",
+     "applies_to": 7,
+     "of": 7,
+     "sample": {
+      "num": 58,
+      "den": 84,
+      "value": "69%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 84,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "How often anyone gets recommended",
+      "what": "How many answers recommend a specific brand or organization at all. Low means AI just gives information.",
+      "status": "Worth tracking",
+      "reason": "About 294 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Recommendation rate",
+       "formula": "answers that recommend a specific brand or organization ÷ all answers",
+       "worked": "58 ÷ 84 = 69%"
+      }
+     }
+    },
+    {
+     "id": "cohort_sov",
+     "label": "Cohort share of voice",
+     "verdict": "keep",
+     "why": "≈434/week in the denominator at full volume",
+     "applies_to": 7,
+     "of": 7,
+     "sample": {
+      "num": 71,
+      "den": 124,
+      "value": "57%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 84,
+     "note": "",
+     "doc": "04-metrics/share-of-voice.md",
+     "plain": {
+      "name": "Stripe vs. competitors",
+      "what": "Of all mentions of Stripe and its tracked competitors, the share that are Stripe.",
+      "status": "Worth tracking",
+      "reason": "About 434 brand mentions a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Share of voice (vs. tracked competitors)",
+       "formula": "mentions of Stripe ÷ mentions of Stripe + tracked competitors",
+       "worked": "71 ÷ 124 = 57%"
+      }
+     }
+    },
+    {
+     "id": "owned_citation_share",
+     "label": "Owned-citation share",
+     "verdict": "keep",
+     "why": "≈920/week in the denominator at full volume",
+     "applies_to": 7,
+     "of": 7,
+     "sample": {
+      "num": 30,
+      "den": 263,
+      "value": "11%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 84,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "How often Stripe's website is a source",
+      "what": "Of all the websites AI cites as sources (each counted once per answer), the share that are Stripe's own.",
+      "status": "Worth tracking",
+      "reason": "About 920 cited websites a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Owned citation share",
+       "formula": "cited websites that are Stripe's ÷ all cited websites (each counted once per answer)",
+       "worked": "30 ÷ 263 = 11%"
+      }
+     }
+    },
+    {
+     "id": "citation_split",
+     "label": "Citation split",
+     "verdict": "keep",
+     "why": "≈920/week in the denominator at full volume",
+     "applies_to": 7,
+     "of": 7,
+     "sample": {
+      "num": 30,
+      "den": 263,
+      "value": "—"
+     },
+     "detail": "third-party 74% · owned 11% · ugc 7% · competitor 6%",
+     "split": {
+      "third-party": 196,
+      "owned": 30,
+      "ugc": 20,
+      "competitor": 17
+     },
+     "looked_at": 84,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "Whose websites AI uses as sources",
+      "what": "Sources split into Stripe's site, competitors' sites, forums and everyone else.",
+      "status": "Worth tracking",
+      "reason": "About 920 cited websites a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Citation split",
+       "formula": "cited websites in each group ÷ all cited websites (each counted once per answer)",
+       "worked": "everyone else 74%, Stripe's site 11%, forums & social 7%, competitors' sites 6% of 263 cited websites"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "Improve checkout and manage recurring payments",
+   "description": "",
+   "prompts": [
+    "p15",
+    "p16",
+    "p17",
+    "p18",
+    "p19",
+    "p20"
+   ],
+   "n_prompts": 6,
+   "shape_mix": {
+    "task": 5,
+    "list": 1
+   },
+   "dominant_shape": "task",
+   "mixed": false,
+   "sample_answers": 72,
+   "headline": "capture",
+   "metrics": [
+    {
+     "id": "mention_rate",
+     "label": "Mention rate",
+     "verdict": "keep",
+     "why": "≈252/week in the denominator at full volume",
+     "applies_to": 6,
+     "of": 6,
+     "sample": {
+      "num": 46,
+      "den": 72,
+      "value": "64%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 72,
+     "note": "",
+     "doc": "04-metrics/README.md#mention-rate",
+     "plain": {
+      "name": "How often Stripe is named",
+      "what": "Out of all answers, how many name Stripe in the text (a link to its site alone doesn't count).",
+      "status": "Worth tracking",
+      "reason": "About 252 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Mention rate",
+       "formula": "answers that name Stripe ÷ all answers",
+       "worked": "46 ÷ 72 = 64%"
+      }
+     }
+    },
+    {
+     "id": "position",
+     "label": "Avg position (when mentioned)",
+     "verdict": "keep",
+     "why": "≈158/week in the denominator at full volume",
+     "applies_to": 6,
+     "of": 6,
+     "sample": {
+      "num": 78,
+      "den": 45,
+      "value": "1.7"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 72,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How early Stripe is named",
+      "what": "When Stripe is mentioned, where it comes in the list of names. 1 = named first.",
+      "status": "Worth tracking",
+      "reason": "About 158 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Average position",
+       "formula": "sum of Stripe's rank in each answer ÷ answers that name Stripe",
+       "worked": "78 ÷ 45 = 1.7"
+      }
+     }
+    },
+    {
+     "id": "top_three_rate",
+     "label": "Top-three rate (when mentioned)",
+     "verdict": "keep",
+     "why": "≈158/week in the denominator at full volume",
+     "applies_to": 6,
+     "of": 6,
+     "sample": {
+      "num": 42,
+      "den": 45,
+      "value": "93%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 72,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How often Stripe is in the top three",
+      "what": "When Stripe is mentioned, how often it's one of the first three names.",
+      "status": "Worth tracking",
+      "reason": "About 158 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Top-three rate",
+       "formula": "answers with Stripe ranked 1–3 ÷ answers that name Stripe",
+       "worked": "42 ÷ 45 = 93%"
+      }
+     }
+    },
+    {
+     "id": "win_rate",
+     "label": "Win rate",
+     "verdict": "thin",
+     "why": "only 1 prompt(s) in this group have a shape this metric fits",
+     "applies_to": 1,
+     "of": 6,
+     "sample": {
+      "num": 0,
+      "den": 0,
+      "value": "—"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 12,
+     "note": "",
+     "doc": "04-metrics/win-rate.md",
+     "plain": {
+      "name": "How often Stripe is the top pick",
+      "what": "When an answer picks one clear winner, how often that winner is Stripe.",
+      "status": "Too little data",
+      "reason": "Only 1 question in this topic suits this, too few to be reliable.",
+      "calculation": {
+       "tech": "Win rate",
+       "formula": "answers whose single winner is Stripe ÷ answers that name Stripe and pick one winner",
+       "worked": "0 ÷ 0: nothing to divide by in the sample"
+      }
+     }
+    },
+    {
+     "id": "capture",
+     "label": "Capture",
+     "verdict": "keep",
+     "why": "≈154/week in the denominator at full volume",
+     "applies_to": 6,
+     "of": 6,
+     "sample": {
+      "num": 32,
+      "den": 44,
+      "value": "73%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 72,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "Stripe's share of recommendations",
+      "what": "When an answer recommends someone specific, how often that includes Stripe.",
+      "status": "Worth tracking",
+      "reason": "About 154 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Capture",
+       "formula": "answers that recommend Stripe ÷ answers that recommend any specific brand or organization",
+       "worked": "32 ÷ 44 = 73%"
+      }
+     }
+    },
+    {
+     "id": "tool_recommendation_rate",
+     "label": "Tool-recommendation rate",
+     "verdict": "keep",
+     "why": "≈210/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 6,
+     "sample": {
+      "num": 34,
+      "den": 60,
+      "value": "57%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "How often anyone gets recommended",
+      "what": "How many answers recommend a specific brand or organization at all. Low means AI just gives information.",
+      "status": "Worth tracking",
+      "reason": "About 210 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Recommendation rate",
+       "formula": "answers that recommend a specific brand or organization ÷ all answers",
+       "worked": "34 ÷ 60 = 57%"
+      }
+     }
+    },
+    {
+     "id": "cohort_sov",
+     "label": "Cohort share of voice",
+     "verdict": "keep",
+     "why": "≈276/week in the denominator at full volume",
+     "applies_to": 6,
+     "of": 6,
+     "sample": {
+      "num": 45,
+      "den": 79,
+      "value": "57%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 72,
+     "note": "",
+     "doc": "04-metrics/share-of-voice.md",
+     "plain": {
+      "name": "Stripe vs. competitors",
+      "what": "Of all mentions of Stripe and its tracked competitors, the share that are Stripe.",
+      "status": "Worth tracking",
+      "reason": "About 276 brand mentions a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Share of voice (vs. tracked competitors)",
+       "formula": "mentions of Stripe ÷ mentions of Stripe + tracked competitors",
+       "worked": "45 ÷ 79 = 57%"
+      }
+     }
+    },
+    {
+     "id": "negative_rate",
+     "label": "Negative rate (negative + mixed)",
+     "verdict": "thin",
+     "why": "only 1 prompt(s) in this group have a shape this metric fits",
+     "applies_to": 1,
+     "of": 6,
+     "sample": {
+      "num": 1,
+      "den": 10,
+      "value": "10%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 12,
+     "note": "",
+     "doc": "04-metrics/sentiment.md",
+     "plain": {
+      "name": "How often AI is critical of Stripe",
+      "what": "When Stripe is mentioned, how often the answer is negative or mixed about it.",
+      "status": "Too little data",
+      "reason": "Only 1 question in this topic suits this, too few to be reliable.",
+      "calculation": {
+       "tech": "Negative rate",
+       "formula": "answers negative or mixed about Stripe ÷ answers that name Stripe",
+       "worked": "1 ÷ 10 = 10%"
+      }
+     }
+    },
+    {
+     "id": "owned_citation_share",
+     "label": "Owned-citation share",
+     "verdict": "keep",
+     "why": "≈836/week in the denominator at full volume",
+     "applies_to": 6,
+     "of": 6,
+     "sample": {
+      "num": 29,
+      "den": 239,
+      "value": "12%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 72,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "How often Stripe's website is a source",
+      "what": "Of all the websites AI cites as sources (each counted once per answer), the share that are Stripe's own.",
+      "status": "Worth tracking",
+      "reason": "About 836 cited websites a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Owned citation share",
+       "formula": "cited websites that are Stripe's ÷ all cited websites (each counted once per answer)",
+       "worked": "29 ÷ 239 = 12%"
+      }
+     }
+    },
+    {
+     "id": "citation_split",
+     "label": "Citation split",
+     "verdict": "keep",
+     "why": "≈836/week in the denominator at full volume",
+     "applies_to": 6,
+     "of": 6,
+     "sample": {
+      "num": 29,
+      "den": 239,
+      "value": "—"
+     },
+     "detail": "third-party 77% · owned 12% · ugc 8% · competitor 1%",
+     "split": {
+      "third-party": 185,
+      "ugc": 21,
+      "owned": 29,
+      "competitor": 4
+     },
+     "looked_at": 72,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "Whose websites AI uses as sources",
+      "what": "Sources split into Stripe's site, competitors' sites, forums and everyone else.",
+      "status": "Worth tracking",
+      "reason": "About 836 cited websites a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Citation split",
+       "formula": "cited websites in each group ÷ all cited websites (each counted once per answer)",
+       "worked": "everyone else 77%, Stripe's site 12%, forums & social 8%, competitors' sites 1% of 239 cited websites"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "Price and accept payments across currencies and regions",
+   "description": "",
+   "prompts": [
+    "p24",
+    "p25",
+    "p26",
+    "p27",
+    "p28",
+    "p29",
+    "p30",
+    "p31",
+    "p32"
+   ],
+   "n_prompts": 9,
+   "shape_mix": {
+    "task": 8,
+    "category": 1
+   },
+   "dominant_shape": "task",
+   "mixed": false,
+   "sample_answers": 108,
+   "headline": "capture",
+   "metrics": [
+    {
+     "id": "mention_rate",
+     "label": "Mention rate",
+     "verdict": "keep",
+     "why": "≈378/week in the denominator at full volume",
+     "applies_to": 9,
+     "of": 9,
+     "sample": {
+      "num": 65,
+      "den": 108,
+      "value": "60%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 108,
+     "note": "",
+     "doc": "04-metrics/README.md#mention-rate",
+     "plain": {
+      "name": "How often Stripe is named",
+      "what": "Out of all answers, how many name Stripe in the text (a link to its site alone doesn't count).",
+      "status": "Worth tracking",
+      "reason": "About 378 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Mention rate",
+       "formula": "answers that name Stripe ÷ all answers",
+       "worked": "65 ÷ 108 = 60%"
+      }
+     }
+    },
+    {
+     "id": "position",
+     "label": "Avg position (when mentioned)",
+     "verdict": "keep",
+     "why": "≈220/week in the denominator at full volume",
+     "applies_to": 8,
+     "of": 9,
+     "sample": {
+      "num": 199,
+      "den": 63,
+      "value": "3.2"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 96,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How early Stripe is named",
+      "what": "When Stripe is mentioned, where it comes in the list of names. 1 = named first.",
+      "status": "Worth tracking",
+      "reason": "About 220 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Average position",
+       "formula": "sum of Stripe's rank in each answer ÷ answers that name Stripe",
+       "worked": "199 ÷ 63 = 3.2"
+      }
+     }
+    },
+    {
+     "id": "top_three_rate",
+     "label": "Top-three rate (when mentioned)",
+     "verdict": "keep",
+     "why": "≈220/week in the denominator at full volume",
+     "applies_to": 8,
+     "of": 9,
+     "sample": {
+      "num": 39,
+      "den": 63,
+      "value": "62%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 96,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How often Stripe is in the top three",
+      "what": "When Stripe is mentioned, how often it's one of the first three names.",
+      "status": "Worth tracking",
+      "reason": "About 220 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Top-three rate",
+       "formula": "answers with Stripe ranked 1–3 ÷ answers that name Stripe",
+       "worked": "39 ÷ 63 = 62%"
+      }
+     }
+    },
+    {
+     "id": "capture",
+     "label": "Capture",
+     "verdict": "keep",
+     "why": "≈220/week in the denominator at full volume",
+     "applies_to": 9,
+     "of": 9,
+     "sample": {
+      "num": 41,
+      "den": 63,
+      "value": "65%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 108,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "Stripe's share of recommendations",
+      "what": "When an answer recommends someone specific, how often that includes Stripe.",
+      "status": "Worth tracking",
+      "reason": "About 220 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Capture",
+       "formula": "answers that recommend Stripe ÷ answers that recommend any specific brand or organization",
+       "worked": "41 ÷ 63 = 65%"
+      }
+     }
+    },
+    {
+     "id": "tool_recommendation_rate",
+     "label": "Tool-recommendation rate",
+     "verdict": "keep",
+     "why": "≈378/week in the denominator at full volume",
+     "applies_to": 9,
+     "of": 9,
+     "sample": {
+      "num": 63,
+      "den": 108,
+      "value": "58%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 108,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "How often anyone gets recommended",
+      "what": "How many answers recommend a specific brand or organization at all. Low means AI just gives information.",
+      "status": "Worth tracking",
+      "reason": "About 378 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Recommendation rate",
+       "formula": "answers that recommend a specific brand or organization ÷ all answers",
+       "worked": "63 ÷ 108 = 58%"
+      }
+     }
+    },
+    {
+     "id": "cohort_sov",
+     "label": "Cohort share of voice",
+     "verdict": "keep",
+     "why": "≈332/week in the denominator at full volume",
+     "applies_to": 8,
+     "of": 9,
+     "sample": {
+      "num": 63,
+      "den": 95,
+      "value": "66%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 96,
+     "note": "",
+     "doc": "04-metrics/share-of-voice.md",
+     "plain": {
+      "name": "Stripe vs. competitors",
+      "what": "Of all mentions of Stripe and its tracked competitors, the share that are Stripe.",
+      "status": "Worth tracking",
+      "reason": "About 332 brand mentions a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Share of voice (vs. tracked competitors)",
+       "formula": "mentions of Stripe ÷ mentions of Stripe + tracked competitors",
+       "worked": "63 ÷ 95 = 66%"
+      }
+     }
+    },
+    {
+     "id": "owned_citation_share",
+     "label": "Owned-citation share",
+     "verdict": "keep",
+     "why": "≈1158/week in the denominator at full volume",
+     "applies_to": 9,
+     "of": 9,
+     "sample": {
+      "num": 26,
+      "den": 331,
+      "value": "8%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 108,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "How often Stripe's website is a source",
+      "what": "Of all the websites AI cites as sources (each counted once per answer), the share that are Stripe's own.",
+      "status": "Worth tracking",
+      "reason": "About 1158 cited websites a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Owned citation share",
+       "formula": "cited websites that are Stripe's ÷ all cited websites (each counted once per answer)",
+       "worked": "26 ÷ 331 = 8%"
+      }
+     }
+    },
+    {
+     "id": "citation_split",
+     "label": "Citation split",
+     "verdict": "keep",
+     "why": "≈1158/week in the denominator at full volume",
+     "applies_to": 9,
+     "of": 9,
+     "sample": {
+      "num": 26,
+      "den": 331,
+      "value": "—"
+     },
+     "detail": "third-party 83% · owned 7% · ugc 6% · competitor 1%",
+     "split": {
+      "third-party": 276,
+      "ugc": 23,
+      "owned": 26,
+      "competitor": 6
+     },
+     "looked_at": 108,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "Whose websites AI uses as sources",
+      "what": "Sources split into Stripe's site, competitors' sites, forums and everyone else.",
+      "status": "Worth tracking",
+      "reason": "About 1158 cited websites a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Citation split",
+       "formula": "cited websites in each group ÷ all cited websites (each counted once per answer)",
+       "worked": "everyone else 83%, Stripe's site 7%, forums & social 6%, competitors' sites 1% of 331 cited websites"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "Meet payment security and compliance requirements",
+   "description": "",
+   "prompts": [
+    "p33",
+    "p34",
+    "p35",
+    "p36",
+    "p37"
+   ],
+   "n_prompts": 5,
+   "shape_mix": {
+    "task": 5
+   },
+   "dominant_shape": "task",
+   "mixed": false,
+   "sample_answers": 60,
+   "headline": "capture",
+   "metrics": [
+    {
+     "id": "mention_rate",
+     "label": "Mention rate",
+     "verdict": "keep",
+     "why": "≈210/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 25,
+      "den": 60,
+      "value": "42%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/README.md#mention-rate",
+     "plain": {
+      "name": "How often Stripe is named",
+      "what": "Out of all answers, how many name Stripe in the text (a link to its site alone doesn't count).",
+      "status": "Worth tracking",
+      "reason": "About 210 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Mention rate",
+       "formula": "answers that name Stripe ÷ all answers",
+       "worked": "25 ÷ 60 = 42%"
+      }
+     }
+    },
+    {
+     "id": "position",
+     "label": "Avg position (when mentioned)",
+     "verdict": "keep",
+     "why": "≈80/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 52,
+      "den": 23,
+      "value": "2.3"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How early Stripe is named",
+      "what": "When Stripe is mentioned, where it comes in the list of names. 1 = named first.",
+      "status": "Worth tracking",
+      "reason": "About 80 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Average position",
+       "formula": "sum of Stripe's rank in each answer ÷ answers that name Stripe",
+       "worked": "52 ÷ 23 = 2.3"
+      }
+     }
+    },
+    {
+     "id": "top_three_rate",
+     "label": "Top-three rate (when mentioned)",
+     "verdict": "keep",
+     "why": "≈80/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 18,
+      "den": 23,
+      "value": "78%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How often Stripe is in the top three",
+      "what": "When Stripe is mentioned, how often it's one of the first three names.",
+      "status": "Worth tracking",
+      "reason": "About 80 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Top-three rate",
+       "formula": "answers with Stripe ranked 1–3 ÷ answers that name Stripe",
+       "worked": "18 ÷ 23 = 78%"
+      }
+     }
+    },
+    {
+     "id": "capture",
+     "label": "Capture",
+     "verdict": "keep",
+     "why": "≈42/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 8,
+      "den": 12,
+      "value": "67%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "Stripe's share of recommendations",
+      "what": "When an answer recommends someone specific, how often that includes Stripe.",
+      "status": "Worth tracking",
+      "reason": "About 42 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Capture",
+       "formula": "answers that recommend Stripe ÷ answers that recommend any specific brand or organization",
+       "worked": "8 ÷ 12 = 67%"
+      }
+     }
+    },
+    {
+     "id": "tool_recommendation_rate",
+     "label": "Tool-recommendation rate",
+     "verdict": "keep",
+     "why": "≈210/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 12,
+      "den": 60,
+      "value": "20%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "How often anyone gets recommended",
+      "what": "How many answers recommend a specific brand or organization at all. Low means AI just gives information.",
+      "status": "Worth tracking",
+      "reason": "About 210 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Recommendation rate",
+       "formula": "answers that recommend a specific brand or organization ÷ all answers",
+       "worked": "12 ÷ 60 = 20%"
+      }
+     }
+    },
+    {
+     "id": "cohort_sov",
+     "label": "Cohort share of voice",
+     "verdict": "keep",
+     "why": "≈147/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 23,
+      "den": 42,
+      "value": "55%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/share-of-voice.md",
+     "plain": {
+      "name": "Stripe vs. competitors",
+      "what": "Of all mentions of Stripe and its tracked competitors, the share that are Stripe.",
+      "status": "Worth tracking",
+      "reason": "About 147 brand mentions a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Share of voice (vs. tracked competitors)",
+       "formula": "mentions of Stripe ÷ mentions of Stripe + tracked competitors",
+       "worked": "23 ÷ 42 = 55%"
+      }
+     }
+    },
+    {
+     "id": "owned_citation_share",
+     "label": "Owned-citation share",
+     "verdict": "keep",
+     "why": "≈634/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 11,
+      "den": 181,
+      "value": "6%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "How often Stripe's website is a source",
+      "what": "Of all the websites AI cites as sources (each counted once per answer), the share that are Stripe's own.",
+      "status": "Worth tracking",
+      "reason": "About 634 cited websites a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Owned citation share",
+       "formula": "cited websites that are Stripe's ÷ all cited websites (each counted once per answer)",
+       "worked": "11 ÷ 181 = 6%"
+      }
+     }
+    },
+    {
+     "id": "citation_split",
+     "label": "Citation split",
+     "verdict": "keep",
+     "why": "≈634/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 11,
+      "den": 181,
+      "value": "—"
+     },
+     "detail": "third-party 87% · owned 6% · ugc 4% · competitor 1%",
+     "split": {
+      "third-party": 159,
+      "ugc": 9,
+      "owned": 11,
+      "competitor": 2
+     },
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "Whose websites AI uses as sources",
+      "what": "Sources split into Stripe's site, competitors' sites, forums and everyone else.",
+      "status": "Worth tracking",
+      "reason": "About 634 cited websites a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Citation split",
+       "formula": "cited websites in each group ÷ all cited websites (each counted once per answer)",
+       "worked": "everyone else 87%, Stripe's site 6%, forums & social 4%, competitors' sites 1% of 181 cited websites"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "Prevent fraud and handle chargebacks",
+   "description": "",
+   "prompts": [
+    "p38",
+    "p39",
+    "p40",
+    "p41",
+    "p42",
+    "p43",
+    "p44"
+   ],
+   "n_prompts": 7,
+   "shape_mix": {
+    "task": 7
+   },
+   "dominant_shape": "task",
+   "mixed": false,
+   "sample_answers": 84,
+   "headline": "capture",
+   "metrics": [
+    {
+     "id": "mention_rate",
+     "label": "Mention rate",
+     "verdict": "keep",
+     "why": "≈294/week in the denominator at full volume",
+     "applies_to": 7,
+     "of": 7,
+     "sample": {
+      "num": 25,
+      "den": 84,
+      "value": "30%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 84,
+     "note": "",
+     "doc": "04-metrics/README.md#mention-rate",
+     "plain": {
+      "name": "How often Stripe is named",
+      "what": "Out of all answers, how many name Stripe in the text (a link to its site alone doesn't count).",
+      "status": "Worth tracking",
+      "reason": "About 294 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Mention rate",
+       "formula": "answers that name Stripe ÷ all answers",
+       "worked": "25 ÷ 84 = 30%"
+      }
+     }
+    },
+    {
+     "id": "position",
+     "label": "Avg position (when mentioned)",
+     "verdict": "keep",
+     "why": "≈88/week in the denominator at full volume",
+     "applies_to": 7,
+     "of": 7,
+     "sample": {
+      "num": 56,
+      "den": 25,
+      "value": "2.2"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 84,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How early Stripe is named",
+      "what": "When Stripe is mentioned, where it comes in the list of names. 1 = named first.",
+      "status": "Worth tracking",
+      "reason": "About 88 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Average position",
+       "formula": "sum of Stripe's rank in each answer ÷ answers that name Stripe",
+       "worked": "56 ÷ 25 = 2.2"
+      }
+     }
+    },
+    {
+     "id": "top_three_rate",
+     "label": "Top-three rate (when mentioned)",
+     "verdict": "keep",
+     "why": "≈88/week in the denominator at full volume",
+     "applies_to": 7,
+     "of": 7,
+     "sample": {
+      "num": 21,
+      "den": 25,
+      "value": "84%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 84,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How often Stripe is in the top three",
+      "what": "When Stripe is mentioned, how often it's one of the first three names.",
+      "status": "Worth tracking",
+      "reason": "About 88 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Top-three rate",
+       "formula": "answers with Stripe ranked 1–3 ÷ answers that name Stripe",
+       "worked": "21 ÷ 25 = 84%"
+      }
+     }
+    },
+    {
+     "id": "capture",
+     "label": "Capture",
+     "verdict": "keep",
+     "why": "≈105/week in the denominator at full volume",
+     "applies_to": 7,
+     "of": 7,
+     "sample": {
+      "num": 11,
+      "den": 30,
+      "value": "37%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 84,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "Stripe's share of recommendations",
+      "what": "When an answer recommends someone specific, how often that includes Stripe.",
+      "status": "Worth tracking",
+      "reason": "About 105 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Capture",
+       "formula": "answers that recommend Stripe ÷ answers that recommend any specific brand or organization",
+       "worked": "11 ÷ 30 = 37%"
+      }
+     }
+    },
+    {
+     "id": "tool_recommendation_rate",
+     "label": "Tool-recommendation rate",
+     "verdict": "keep",
+     "why": "≈294/week in the denominator at full volume",
+     "applies_to": 7,
+     "of": 7,
+     "sample": {
+      "num": 30,
+      "den": 84,
+      "value": "36%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 84,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "How often anyone gets recommended",
+      "what": "How many answers recommend a specific brand or organization at all. Low means AI just gives information.",
+      "status": "Worth tracking",
+      "reason": "About 294 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Recommendation rate",
+       "formula": "answers that recommend a specific brand or organization ÷ all answers",
+       "worked": "30 ÷ 84 = 36%"
+      }
+     }
+    },
+    {
+     "id": "cohort_sov",
+     "label": "Cohort share of voice",
+     "verdict": "keep",
+     "why": "≈168/week in the denominator at full volume",
+     "applies_to": 7,
+     "of": 7,
+     "sample": {
+      "num": 25,
+      "den": 48,
+      "value": "52%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 84,
+     "note": "",
+     "doc": "04-metrics/share-of-voice.md",
+     "plain": {
+      "name": "Stripe vs. competitors",
+      "what": "Of all mentions of Stripe and its tracked competitors, the share that are Stripe.",
+      "status": "Worth tracking",
+      "reason": "About 168 brand mentions a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Share of voice (vs. tracked competitors)",
+       "formula": "mentions of Stripe ÷ mentions of Stripe + tracked competitors",
+       "worked": "25 ÷ 48 = 52%"
+      }
+     }
+    },
+    {
+     "id": "owned_citation_share",
+     "label": "Owned-citation share",
+     "verdict": "keep",
+     "why": "≈854/week in the denominator at full volume",
+     "applies_to": 7,
+     "of": 7,
+     "sample": {
+      "num": 24,
+      "den": 244,
+      "value": "10%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 84,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "How often Stripe's website is a source",
+      "what": "Of all the websites AI cites as sources (each counted once per answer), the share that are Stripe's own.",
+      "status": "Worth tracking",
+      "reason": "About 854 cited websites a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Owned citation share",
+       "formula": "cited websites that are Stripe's ÷ all cited websites (each counted once per answer)",
+       "worked": "24 ÷ 244 = 10%"
+      }
+     }
+    },
+    {
+     "id": "citation_split",
+     "label": "Citation split",
+     "verdict": "keep",
+     "why": "≈854/week in the denominator at full volume",
+     "applies_to": 7,
+     "of": 7,
+     "sample": {
+      "num": 24,
+      "den": 244,
+      "value": "—"
+     },
+     "detail": "third-party 86% · owned 9% · ugc 4%",
+     "split": {
+      "third-party": 210,
+      "ugc": 10,
+      "owned": 24
+     },
+     "looked_at": 84,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "Whose websites AI uses as sources",
+      "what": "Sources split into Stripe's site, competitors' sites, forums and everyone else.",
+      "status": "Worth tracking",
+      "reason": "About 854 cited websites a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Citation split",
+       "formula": "cited websites in each group ÷ all cited websites (each counted once per answer)",
+       "worked": "everyone else 86%, Stripe's site 9%, forums & social 4% of 244 cited websites"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "Resolve payment issues and complete transaction follow-up",
+   "description": "",
+   "prompts": [
+    "p45",
+    "p47",
+    "p48",
+    "p49",
+    "p50"
+   ],
+   "n_prompts": 5,
+   "shape_mix": {
+    "task": 5
+   },
+   "dominant_shape": "task",
+   "mixed": false,
+   "sample_answers": 60,
+   "headline": "capture",
+   "metrics": [
+    {
+     "id": "mention_rate",
+     "label": "Mention rate",
+     "verdict": "keep",
+     "why": "≈210/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 27,
+      "den": 60,
+      "value": "45%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/README.md#mention-rate",
+     "plain": {
+      "name": "How often Stripe is named",
+      "what": "Out of all answers, how many name Stripe in the text (a link to its site alone doesn't count).",
+      "status": "Worth tracking",
+      "reason": "About 210 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Mention rate",
+       "formula": "answers that name Stripe ÷ all answers",
+       "worked": "27 ÷ 60 = 45%"
+      }
+     }
+    },
+    {
+     "id": "position",
+     "label": "Avg position (when mentioned)",
+     "verdict": "keep",
+     "why": "≈94/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 58,
+      "den": 27,
+      "value": "2.1"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How early Stripe is named",
+      "what": "When Stripe is mentioned, where it comes in the list of names. 1 = named first.",
+      "status": "Worth tracking",
+      "reason": "About 94 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Average position",
+       "formula": "sum of Stripe's rank in each answer ÷ answers that name Stripe",
+       "worked": "58 ÷ 27 = 2.1"
+      }
+     }
+    },
+    {
+     "id": "top_three_rate",
+     "label": "Top-three rate (when mentioned)",
+     "verdict": "keep",
+     "why": "≈94/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 22,
+      "den": 27,
+      "value": "81%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/position.md",
+     "plain": {
+      "name": "How often Stripe is in the top three",
+      "what": "When Stripe is mentioned, how often it's one of the first three names.",
+      "status": "Worth tracking",
+      "reason": "About 94 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Top-three rate",
+       "formula": "answers with Stripe ranked 1–3 ÷ answers that name Stripe",
+       "worked": "22 ÷ 27 = 81%"
+      }
+     }
+    },
+    {
+     "id": "capture",
+     "label": "Capture",
+     "verdict": "keep",
+     "why": "≈32/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 8,
+      "den": 9,
+      "value": "89%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "Stripe's share of recommendations",
+      "what": "When an answer recommends someone specific, how often that includes Stripe.",
+      "status": "Worth tracking",
+      "reason": "About 32 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Capture",
+       "formula": "answers that recommend Stripe ÷ answers that recommend any specific brand or organization",
+       "worked": "8 ÷ 9 = 89%"
+      }
+     }
+    },
+    {
+     "id": "tool_recommendation_rate",
+     "label": "Tool-recommendation rate",
+     "verdict": "keep",
+     "why": "≈210/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 9,
+      "den": 60,
+      "value": "15%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/capture.md",
+     "plain": {
+      "name": "How often anyone gets recommended",
+      "what": "How many answers recommend a specific brand or organization at all. Low means AI just gives information.",
+      "status": "Worth tracking",
+      "reason": "About 210 answers a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Recommendation rate",
+       "formula": "answers that recommend a specific brand or organization ÷ all answers",
+       "worked": "9 ÷ 60 = 15%"
+      }
+     }
+    },
+    {
+     "id": "cohort_sov",
+     "label": "Cohort share of voice",
+     "verdict": "keep",
+     "why": "≈192/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 27,
+      "den": 55,
+      "value": "49%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/share-of-voice.md",
+     "plain": {
+      "name": "Stripe vs. competitors",
+      "what": "Of all mentions of Stripe and its tracked competitors, the share that are Stripe.",
+      "status": "Worth tracking",
+      "reason": "About 192 brand mentions a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Share of voice (vs. tracked competitors)",
+       "formula": "mentions of Stripe ÷ mentions of Stripe + tracked competitors",
+       "worked": "27 ÷ 55 = 49%"
+      }
+     }
+    },
+    {
+     "id": "owned_citation_share",
+     "label": "Owned-citation share",
+     "verdict": "keep",
+     "why": "≈682/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 17,
+      "den": 195,
+      "value": "9%"
+     },
+     "detail": "",
+     "split": null,
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "How often Stripe's website is a source",
+      "what": "Of all the websites AI cites as sources (each counted once per answer), the share that are Stripe's own.",
+      "status": "Worth tracking",
+      "reason": "About 682 cited websites a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Owned citation share",
+       "formula": "cited websites that are Stripe's ÷ all cited websites (each counted once per answer)",
+       "worked": "17 ÷ 195 = 9%"
+      }
+     }
+    },
+    {
+     "id": "citation_split",
+     "label": "Citation split",
+     "verdict": "keep",
+     "why": "≈682/week in the denominator at full volume",
+     "applies_to": 5,
+     "of": 5,
+     "sample": {
+      "num": 17,
+      "den": 195,
+      "value": "—"
+     },
+     "detail": "third-party 83% · owned 8% · ugc 4% · competitor 3%",
+     "split": {
+      "third-party": 163,
+      "owned": 17,
+      "ugc": 9,
+      "competitor": 6
+     },
+     "looked_at": 60,
+     "note": "",
+     "doc": "04-metrics/citation-metrics.md",
+     "plain": {
+      "name": "Whose websites AI uses as sources",
+      "what": "Sources split into Stripe's site, competitors' sites, forums and everyone else.",
+      "status": "Worth tracking",
+      "reason": "About 682 cited websites a week to count, enough to see real changes.",
+      "calculation": {
+       "tech": "Citation split",
+       "formula": "cited websites in each group ÷ all cited websites (each counted once per answer)",
+       "worked": "everyone else 83%, Stripe's site 8%, forums & social 4%, competitors' sites 3% of 195 cited websites"
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "unmet_needs": [],
+ "questions": {
+  "1 head-to-head": false,
+  "2 category list": true,
+  "3 sub-niches": true,
+  "4 task recommendations": true,
+  "5 source influence": true,
+  "6 fact fidelity": false,
+  "7 narrative risk": false,
+  "8 adjacent categories": false,
+  "9 crawl health": false,
+  "10 citation freshness": true,
+  "11 tracked pages": false,
+  "12 citation attention": true
+ },
+ "warnings": [
+  "Mixed-shape groups: Choose a payment provider for your business. Each metric is computed only on the prompts whose shape allows it (see 'applies to').",
+  "3 of 50 prompts flagged for review in shapes.csv (model and word rules disagree, or a brand name overrode the model)."
+ ],
+ "plain": {
+  "fit": "Good fit for a dashboard",
+  "fit_text": "Most questions can be measured. Each topic below has at least one number worth tracking.",
+  "notes": [
+   "3 of 50 questions were hard to sort. They're marked ⚠ in each topic's question list and are worth a quick look."
+  ]
+ }
+}
