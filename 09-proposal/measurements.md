@@ -14,6 +14,7 @@ same.
 ```json
 {
   "brand": "Acme",
+  "report_id": "<the id from your report's address>",
   "generated": "2026-09-29",
   "classifier": "Claude via the Ahrefs MCP server",
   "surfaces": ["chatgpt", "gemini", "perplexity", "copilot"],
@@ -49,6 +50,8 @@ same.
 | Field | What it is |
 |---|---|
 | `brand` | display name |
+| `report_id` | **required**: the id of the user's Brand Radar report, from its address (`app.ahrefs.com/brand-radar/reports/<id>/…`). The page refuses to render without a real one, and prints it in the footer |
+| `demo` | only for a demo the user explicitly asked for: `true` replaces `report_id`, and the page is labelled *made-up data* at the top and in the footer. `from_measurements.py` refuses demo data |
 | `surfaces` | the AI surfaces that returned answers; only its length is used |
 | `days` | whole days of answers used |
 | `answers` / `answers_expected` | answers loaded, and questions × surfaces × days. The page warns when under 90% |
