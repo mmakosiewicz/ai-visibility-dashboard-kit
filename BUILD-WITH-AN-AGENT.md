@@ -18,7 +18,7 @@ what makes the rebuild wasted work:
 | Brand Radar report with custom prompts | tagged per research question |
 | API/connector access to it | and a token that works from your environment |
 | Your approved proposal | from Claude/ChatGPT with the Ahrefs MCP server ([`09-proposal/with-mcp.md`](09-proposal/with-mcp.md), then `scripts/from_measurements.py`) or `python3 scripts/propose.py`, reviewed until the board table is right. Its `plan.json` is the build config. The fit report is the free, word-rule version of the same check |
-| A filled `brand.yaml` | [`08-adapting/brand.yaml`](08-adapting/brand.yaml); the two examples show what changes between brands |
+| A filled `brand.yaml` | [`08-adapting/brand.yaml`](08-adapting/brand.yaml) (a commented template); the [case studies](10-case-studies/) describe what changes between brands |
 | Which questions you're starting with | the ✓ rows of the fit report; if in doubt, [`01-questions/README.md`](01-questions/README.md#if-you-only-build-five) |
 
 ## Phase order
@@ -27,7 +27,7 @@ what makes the rebuild wasted work:
 Brand Radar report to measure and pulling a whole day of its answers
 (`scripts/fetch_report.py`). Then it sorts the questions, picks metrics from the
 menu, checks them on those answers, and waits for your approval. Skip
-it only if your prompts look like one of the worked examples and the fit report
+it only if your prompts look like one of the case studies and the fit report
 agrees with your own reading.
 
 **Working in a chat assistant (ChatGPT, Claude) rather than a terminal?** With
