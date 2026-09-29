@@ -86,9 +86,8 @@ proposal.
 
 **A chat assistant without the Ahrefs MCP server** can follow
 [`09-proposal/for-chat-assistants.md`](09-proposal/for-chat-assistants.md)
-instead. See the worked outputs in
-[`examples/stripe/proposal/`](examples/stripe/proposal/proposal.md) and
-[`examples/off-market/proposal/`](examples/off-market/proposal/proposal.md).
+instead. What the proposal found on real reports is in
+[`10-case-studies/`](10-case-studies/).
 
 ## Where it comes from
 
@@ -98,7 +97,7 @@ worklists someone can act on. This repo is everything except my data: the
 questions, the question types, the schema, the metric definitions, the card
 layout, the pipeline, and the four traps that made my numbers wrong before I
 caught them. What carries over to your brand is the method, not the cards: the
-two worked examples produced 16 cards on one report and 7 on another.
+two [case studies](10-case-studies/) produced 16 cards on one report and 7 on another.
 
 ## Why a spec instead of code
 
@@ -130,7 +129,7 @@ With the Ahrefs MCP server you don't need any key: the assistant is the grader
 `python3 scripts/propose.py --prompts questions.csv --brand brand.yaml --answers answers.jsonl`.
 For a free, instant check with no AI model at all, `scripts/fit_report.py` sorts
 questions with fixed word rules. It works well on question sets like the
-examples and guesses on anything else. Then follow [`08-adapting/`](08-adapting/).
+case studies and guesses on anything else. Then follow [`08-adapting/`](08-adapting/).
 
 ## Read in this order
 
@@ -145,7 +144,7 @@ examples and guesses on anything else. Then follow [`08-adapting/`](08-adapting/
 | [`07-gotchas/`](07-gotchas/) | Four ways these numbers will mislead you (plus sample size). Read before you trust a chart |
 | [`08-adapting/`](08-adapting/) | Fit report, `brand.yaml`, the grader as a template, headline-per-shape. **The procedure for a report that isn't mine** |
 | [`09-proposal/`](09-proposal/) | Step 0: an LLM reads your prompts, proposes groups, shapes and metrics from a fixed menu, and checks each on sample answers. Readable proposal + editable shapes.csv + plan.json |
-| [`examples/`](examples/) | Two worked builds: [SEO tools](examples/ahrefs/) (194 prompts, 16 cards) and [payments](examples/stripe/) (50 prompts, 7 cards) — same spec, different dashboards, and why |
+| [`10-case-studies/`](10-case-studies/) | What happened on real reports: [SEO tools](10-case-studies/seo-tools.md) (194 prompts, 16 cards) and [payments](10-case-studies/payments.md) (50 prompts, 7 cards), same spec, different dashboards, and why. Reading only: no data to run |
 | [`BUILD-WITH-AN-AGENT.md`](BUILD-WITH-AN-AGENT.md) | Hand this spec to a coding agent and get your own dashboard |
 
 ## The one-paragraph version
@@ -162,14 +161,15 @@ reporting obligation, not a tool.
 
 ## Scope and honesty notes
 
-- **Prompts, not answers.** Both example prompt lists are published in full.
-  No answer text or citation tables are; the handful of numbers in the example
-  READMEs are one week of one report, there to show the shape of the output.
+- **No sample data.** There are no question lists, answers or plans to run: every
+  build starts from your own Brand Radar report, and the scripts and report page
+  refuse input that doesn't name one. The handful of numbers in the case studies
+  are one week of one report, there to show the shape of the output.
 - **Ahrefs-specific by design.** Brand Radar is the data source, named
   throughout. Most of the spec (schema, metrics, card anatomy, gotchas) is
   source-agnostic and portable; questions 9 and 11 lean on Ahrefs specifically.
 - **Twelve questions is my answer on my prompt set, not the answer.** The
-  payments example supports seven. [`scripts/fit_report.py`](scripts/fit_report.py)
+  payments case supports seven. [`scripts/fit_report.py`](scripts/fit_report.py)
   tells you how many yours supports; [`01-questions/README.md`](01-questions/README.md)
   says which to build first.
 - **Written from a running system.** Every metric definition, grading prompt and
