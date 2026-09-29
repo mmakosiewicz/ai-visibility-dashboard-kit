@@ -49,10 +49,13 @@ Don't make up, guess or carry over from another project:
 - answer text, citations or metric values
 - topics, question types or `plan.json` contents
 
-The examples show the method. They are never fallback data, and neither is
-anything from an earlier conversation. **Synthetic data only when the user asks
-for a demo or mockup**, and then labelled as such on the page and in what you
-hand over.
+The repo ships no runnable sample data on purpose: no question lists, brand
+files, answers or plans. [`10-case-studies/`](10-case-studies/) is reading only.
+Nothing from an earlier conversation counts either. The report page and
+`propose.py` refuse input that doesn't name a real Brand Radar report id.
+**Synthetic data only when the user asks for a demo or mockup**: use `--demo`
+(script) or `"demo": true` (measurements). The report is then labelled as
+made-up data, and it can't be turned into build files.
 
 ## While building
 
