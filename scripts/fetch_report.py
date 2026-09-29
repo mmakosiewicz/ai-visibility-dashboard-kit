@@ -140,7 +140,7 @@ def main() -> int:
     report = parse_report(raw)
     if not report:
         sys.exit("That doesn't look like a Brand Radar report URL or id. Open the report in Ahrefs and copy "
-                 "the address: it contains an id like 0190a1b2-c3d4-7e5f-8a9b-0c1d2e3f4a5b.")
+                 "the address: it contains a long id made of letters, digits and dashes.")
     key = os.environ.get("AHREFS_API_KEY") or ask("Ahrefs API key (or set AHREFS_API_KEY)")
     if not key:
         sys.exit("An Ahrefs API key with Brand Radar access is required.")
