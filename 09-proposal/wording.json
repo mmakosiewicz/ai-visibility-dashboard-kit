@@ -1,0 +1,183 @@
+{
+ "TYPES": {
+  "branded": [
+   "About you",
+   "Names {B} directly",
+   "e.g. “{B} vs …”, “is {B} good?”"
+  ],
+  "conquest": [
+   "About a competitor",
+   "Names a competitor, not {B}",
+   "e.g. “is [competitor] any good?”"
+  ],
+  "list": [
+   "Asks for recommendations",
+   "Wants names: the best, which one, where to go",
+   "e.g. “best … for …”, “which … should I …?”"
+  ],
+  "task": [
+   "Asks how to do something",
+   "Wants steps or help with a job",
+   "e.g. “how do I …?”"
+  ],
+  "category": [
+   "General question",
+   "Wants information, not a recommendation",
+   "e.g. “what is …?”, “is … worth it?”"
+  ],
+  "none": [
+   "Off-topic",
+   "Unrelated to {B}'s market",
+   "nothing to measure except sources"
+  ]
+ },
+ "METRICS": {
+  "mention_rate": [
+   "How often {B} is named",
+   "Out of all answers, how many name {B} in the text (a link to its site alone doesn't count)."
+  ],
+  "position": [
+   "How early {B} is named",
+   "When {B} is mentioned, where it comes in the list of names. 1 = named first."
+  ],
+  "top_three_rate": [
+   "How often {B} is in the top three",
+   "When {B} is mentioned, how often it's one of the first three names."
+  ],
+  "win_rate": [
+   "How often {B} is the top pick",
+   "When an answer picks one clear winner, how often that winner is {B}."
+  ],
+  "capture": [
+   "{B}'s share of recommendations",
+   "When an answer recommends someone specific, how often that includes {B}."
+  ],
+  "tool_recommendation_rate": [
+   "How often anyone gets recommended",
+   "How many answers recommend a specific brand or organization at all. Low means AI just gives information."
+  ],
+  "cohort_sov": [
+   "{B} vs. competitors",
+   "Of all mentions of {B} and its tracked competitors, the share that are {B}."
+  ],
+  "negative_rate": [
+   "How often AI is critical of {B}",
+   "When {B} is mentioned, how often the answer is negative or mixed about it."
+  ],
+  "fact_accuracy": [
+   "How often AI gets facts about {B} wrong",
+   "Checks claims in answers against a list of verified facts."
+  ],
+  "owned_citation_share": [
+   "How often {B}'s website is a source",
+   "Of all the websites AI cites as sources (each counted once per answer), the share that are {B}'s own."
+  ],
+  "citation_split": [
+   "Whose websites AI uses as sources",
+   "Sources split into {B}'s site, competitors' sites, forums and everyone else."
+  ]
+ },
+ "SENTENCE": {
+  "mention_rate": "{n} of {d} answers name {B}",
+  "top_three_rate": "{n} of {d} answers that name {B} put it in the top three",
+  "win_rate": "when there's one clear winner, it's {B} {n} of {d} times",
+  "capture": "{n} of {d} answers that recommend someone include {B}",
+  "tool_recommendation_rate": "{n} of {d} answers recommend a specific brand or organization",
+  "cohort_sov": "{B} gets {n} of {d} mentions among itself and competitors",
+  "negative_rate": "{n} of {d} answers that name {B} are negative or mixed",
+  "owned_citation_share": "{n} of {d} cited websites are {B}'s"
+ },
+ "STATUS": {
+  "keep": [
+   "Worth tracking",
+   "ok"
+  ],
+  "floor": [
+   "Track only as a starting point",
+   "warn"
+  ],
+  "thin": [
+   "Too little data",
+   "off"
+  ],
+  "zero": [
+   "Nothing to measure",
+   "off"
+  ],
+  "unavailable": [
+   "Can't measure yet",
+   "off"
+  ]
+ },
+ "SET_TEXT": {
+  "full": [
+   "Good fit for a dashboard",
+   "Most questions can be measured. Each topic below has at least one number worth tracking."
+  ],
+  "partial": [
+   "Partly measurable",
+   "A good share of questions can't be measured beyond which websites AI cites. Build the topics that have a main number and skip the rest."
+  ],
+  "citations-only": [
+   "Only sources can be tracked",
+   "Most questions are off-topic for {B}. The only useful thing to track is which websites AI cites."
+  ]
+ },
+ "FORMULA": {
+  "mention_rate": [
+   "Mention rate",
+   "answers that name {B}",
+   "all answers"
+  ],
+  "position": [
+   "Average position",
+   "sum of {B}'s rank in each answer",
+   "answers that name {B}"
+  ],
+  "top_three_rate": [
+   "Top-three rate",
+   "answers with {B} ranked 1–3",
+   "answers that name {B}"
+  ],
+  "win_rate": [
+   "Win rate",
+   "answers whose single winner is {B}",
+   "answers that name {B} and pick one winner"
+  ],
+  "capture": [
+   "Capture",
+   "answers that recommend {B}",
+   "answers that recommend any specific brand or organization"
+  ],
+  "tool_recommendation_rate": [
+   "Recommendation rate",
+   "answers that recommend a specific brand or organization",
+   "all answers"
+  ],
+  "cohort_sov": [
+   "Share of voice (vs. tracked competitors)",
+   "mentions of {B}",
+   "mentions of {B} + tracked competitors"
+  ],
+  "negative_rate": [
+   "Negative rate",
+   "answers negative or mixed about {B}",
+   "answers that name {B}"
+  ],
+  "fact_accuracy": [
+   "Wrong-claim rate",
+   "claims about {B} that contradict the fact list",
+   "claims that can be checked"
+  ],
+  "owned_citation_share": [
+   "Owned citation share",
+   "cited websites that are {B}'s",
+   "all cited websites (each counted once per answer)"
+  ],
+  "citation_split": [
+   "Citation split",
+   "cited websites in each group",
+   "all cited websites (each counted once per answer)"
+  ]
+ }
+}
