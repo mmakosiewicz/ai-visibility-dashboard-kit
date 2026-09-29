@@ -116,15 +116,17 @@ that no metric in the menu serves, and doesn't invent one. If a need matters,
 design the metric yourself, write its denominator down, add it to
 `metric-menu.json` and re-run.
 
-## What the examples show
+## What it found on real reports
 
-- [examples/stripe/proposal/](../examples/stripe/proposal/): 50 untagged payment
+Summaries are in [`../10-case-studies/`](../10-case-studies/); no outputs are
+shipped, so nothing can stand in for your own report.
+
+- A payments report: 50 untagged
   prompts. The model proposed 8 groups; one prompt was moved by hand. Capture is
   the headline for 7 of 8 groups. That's the same conclusion the hand-built board
   reached, now with sample numbers: fraud & disputes is the weak group (37% of
   30), as it is on the live board.
-- [examples/off-market/proposal/](../examples/off-market/proposal/): a
-  deliberately awkward set for a Lisbon dental clinic, with five off-topic
+- A deliberately awkward set for a Lisbon dental clinic, with five off-topic
   prompts mixed in. The model split out an "Outside the market" group as `none`,
   grouped the rest into three patient jobs, and corrected two prompts the word
   rules got wrong: "dentist near me open saturday" is a list prompt, not
