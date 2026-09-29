@@ -61,7 +61,7 @@ people skip because it isn't about AI at all.
 
 Before choosing five, run [`scripts/fit_report.py`](../scripts/fit_report.py)
 on your prompt list. It marks each question answerable or not from the shape
-counts. The payments example ([examples/stripe](../examples/stripe/)) came out
+counts. The payments case ([10-case-studies](../10-case-studies/payments.md)) came out
 with 1, 6, 7, 8 and 9 unanswerable — and a perfectly useful seven-card board.
 
 ## If you only build five
