@@ -1,6 +1,6 @@
 # brand.yaml — everything the dashboard needs to know about YOUR brand.
 # Everything not in this file is generic: schema, metrics, cards, pipeline.
-# Two filled copies: examples/ahrefs/brand.yaml and examples/stripe/brand.yaml.
+# Placeholder values (acme, rivalco): replace every one with your own brand's.
 
 brand: acme                     # lowercase, as the grader should output it
 label: Acme                     # display name
