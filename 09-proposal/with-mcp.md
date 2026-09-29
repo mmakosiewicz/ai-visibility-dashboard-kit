@@ -147,7 +147,8 @@ the first your client supports:
 3. **Offline.** They download the template from the repo, open it and paste
    in the same way.
 
-Set `cited_flag` to `false`: MCP links don't say which were actually cited.
+Put the report's id in `report_id`; the page won't render without it. Set
+`cited_flag` to `false`: MCP links don't say which were actually cited.
 Include the brand details the user confirmed in step 1 (`competitors`,
 `variants`, `owned_domains`, `competitor_domains`, `category`): the build needs
 them.
