@@ -483,6 +483,8 @@ def main() -> int:
     ap.add_argument("--from-shapes", help="reuse an edited shapes.csv instead of classifying again")
     ap.add_argument("--sorted-by", help="who sorted the questions, shown in the footer (default: from the input)")
     ap.add_argument("--workers", type=int, default=8)
+    ap.add_argument("--report-id", help="the Brand Radar report the questions come from (read from fetch.json with --from-report)")
+    ap.add_argument("--demo", action="store_true", help="made-up data for a demo the user asked for; the report is labelled as such")
     args = ap.parse_args()
     if not args.from_report and not args.prompts:
         # Everything starts from a Brand Radar report: fetch it first.
@@ -507,6 +509,16 @@ def main() -> int:
             args.out = str(d / "proposal")
     if not args.brand:
         sys.exit("--brand is required with --prompts (or use --from-report).")
+    report_id = args.report_id
+    if args.from_report and (Path(args.from_report) / "fetch.json").exists():
+        report_id = report_id or json.loads((Path(args.from_report) / "fetch.json").read_text()).get("report_id")
+    if not report_id and not args.demo:
+        sys.exit("Which Brand Radar report are these questions from? Every proposal starts from the user's own report:\n"
+                 "  run scripts/fetch_report.py (or propose.py with no arguments), or pass --report-id <id from the report's URL>.\n"
+                 "Only for a demo the user asked for: --demo (the report is labelled as made-up data).")
+    if report_id and (not re.fullmatch(r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}", report_id.strip(), re.I)
+                      or report_id.strip().lower().startswith("0190a1b2-c3d4")):
+        sys.exit(f"{report_id!r} isn't a Brand Radar report id (copy it from app.ahrefs.com/brand-radar/reports/<id>/…).")
 
     bc = brand_config(args.brand, args.category)
     prompts = load_prompts(args.prompts)
@@ -640,6 +652,7 @@ def main() -> int:
     plan = {
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "brand": bc["brand"], "label": bc["label"], "category": bc["category"],
+        "report_id": report_id, "demo": args.demo or None,
         "classifier": args.sorted_by or ("a reviewed question list" if args.from_shapes
                                          else ("word rules" if args.no_llm else args.model)),
         "prompts": n, "shapes": dict(shape_n), "set_verdict": set_verdict, "set_notes": meta["set_notes"],
@@ -685,6 +698,10 @@ def render_md(plan, rows) -> str:
     """proposal.md: the same plain-language view as the Console page."""
     B = plan["label"]
     L = [f"# What to track for {B} in AI answers", ""]
+    if plan.get("demo"):
+        L += ["> **Demo: made-up data.** Nothing here comes from a real Brand Radar report.", ""]
+    else:
+        L += [f"Source: Ahrefs Brand Radar report `{plan.get('report_id')}`.", ""]
     s = plan["sample"]
     days = "one day" if s["days"] == 1 else f"{s['days']} days"
     L += [f"We read the {plan['prompts']} questions this report tracks, sorted them into {len(plan['groups'])} topics, "
