@@ -1,0 +1,218 @@
+{
+  "_readme": "The only metrics the proposal step may choose. Validity per shape mirrors the table in 02-prompts/shapes.md; 'primary' marks the headline candidate. A shape not listed under a metric means that cell is ✗ or — and the metric is never proposed for it. Edit this file, not the script, to change the rules.",
+  "shapes": {
+    "branded": "the prompt names your brand or one of its products",
+    "conquest": "the prompt names a tracked competitor but not you",
+    "list": "names no product; asks for options, a shortlist, a recommendation or a product finder",
+    "task": "names no product; asks how to do a job, set something up, or fix a problem",
+    "category": "names no product; asks about the category, a concept, a definition, a decision or whether something is worth it",
+    "none": "no answer to this prompt could reasonably name a brand in your market (news, health, homework, creative, off-topic); only citation metrics apply"
+  },
+  "headline_by_shape": {
+    "branded": [
+      "win_rate",
+      "fact_accuracy",
+      "negative_rate",
+      "mention_rate"
+    ],
+    "conquest": [
+      "mention_rate",
+      "capture",
+      "cohort_sov"
+    ],
+    "list": [
+      "mention_rate",
+      "position",
+      "cohort_sov"
+    ],
+    "task": [
+      "capture",
+      "tool_recommendation_rate",
+      "mention_rate"
+    ],
+    "category": [
+      "tool_recommendation_rate",
+      "capture",
+      "owned_citation_share"
+    ],
+    "none": [
+      "owned_citation_share",
+      "citation_split"
+    ]
+  },
+  "metrics": {
+    "mention_rate": {
+      "label": "Mention rate",
+      "formula": "answers naming you / all answers",
+      "denominator": "all answers",
+      "shapes": [
+        "branded",
+        "conquest",
+        "list",
+        "task",
+        "category"
+      ],
+      "min_n": 20,
+      "notes": {
+        "branded": "expect ~100%; a miss is a grading bug, not a finding",
+        "category": "unprompted: nobody asked for an organisation. Near 0 for software brands; for a charity or information resource, being named here may be the point"
+      },
+      "doc": "04-metrics/README.md#mention-rate"
+    },
+    "position": {
+      "label": "Avg position (when mentioned)",
+      "formula": "mean first-appearance rank",
+      "denominator": "answers naming you",
+      "shapes": [
+        "conquest",
+        "list",
+        "task"
+      ],
+      "min_n": 10,
+      "doc": "04-metrics/position.md"
+    },
+    "top_three_rate": {
+      "label": "Top-three rate (when mentioned)",
+      "formula": "answers ranking you <=3 / answers naming you",
+      "denominator": "answers naming you",
+      "shapes": [
+        "conquest",
+        "list",
+        "task"
+      ],
+      "min_n": 10,
+      "doc": "04-metrics/position.md"
+    },
+    "win_rate": {
+      "label": "Win rate",
+      "formula": "wins / (wins + losses)",
+      "denominator": "eligible answers that name a winner",
+      "shapes": [
+        "branded",
+        "list"
+      ],
+      "min_n": 10,
+      "notes": {
+        "list": "only answers whose verdict is in a comparison with you (per-answer rule)"
+      },
+      "doc": "04-metrics/win-rate.md"
+    },
+    "capture": {
+      "label": "Capture",
+      "formula": "answers recommending you as a tool / answers recommending any named tool",
+      "denominator": "answers that recommend a named tool",
+      "shapes": [
+        "conquest",
+        "list",
+        "task",
+        "category"
+      ],
+      "min_n": 20,
+      "doc": "04-metrics/capture.md"
+    },
+    "tool_recommendation_rate": {
+      "label": "Tool-recommendation rate",
+      "formula": "answers recommending any named tool / all answers",
+      "denominator": "all answers",
+      "shapes": [
+        "task",
+        "category"
+      ],
+      "min_n": 20,
+      "doc": "04-metrics/capture.md"
+    },
+    "cohort_sov": {
+      "label": "Cohort share of voice",
+      "formula": "your mentions / mentions of you + tracked competitors",
+      "denominator": "cohort mentions",
+      "shapes": [
+        "conquest",
+        "list",
+        "task"
+      ],
+      "min_n": 20,
+      "doc": "04-metrics/share-of-voice.md"
+    },
+    "negative_rate": {
+      "label": "Negative rate (negative + mixed)",
+      "formula": "negative or mixed answers / answers naming you",
+      "denominator": "answers naming you",
+      "shapes": [
+        "branded",
+        "conquest",
+        "list"
+      ],
+      "min_n": 20,
+      "doc": "04-metrics/sentiment.md"
+    },
+    "fact_accuracy": {
+      "label": "Wrong-claim rate",
+      "formula": "contradicted / checkable claims",
+      "denominator": "checkable claims",
+      "shapes": [
+        "branded"
+      ],
+      "min_n": 20,
+      "requires": "fact_sheet",
+      "sampled": false,
+      "doc": "04-metrics/accuracy.md"
+    },
+    "owned_citation_share": {
+      "label": "Owned-citation share",
+      "formula": "confirmed citations to your domains / all confirmed citations",
+      "denominator": "confirmed citations",
+      "shapes": [
+        "branded",
+        "conquest",
+        "list",
+        "task",
+        "category",
+        "none"
+      ],
+      "min_n": 30,
+      "doc": "04-metrics/citation-metrics.md"
+    },
+    "citation_split": {
+      "label": "Citation split",
+      "formula": "confirmed citations per class (owned/competitor/ugc/third-party) / all",
+      "denominator": "confirmed citations",
+      "shapes": [
+        "branded",
+        "conquest",
+        "list",
+        "task",
+        "category",
+        "none"
+      ],
+      "min_n": 30,
+      "doc": "04-metrics/citation-metrics.md"
+    }
+  },
+  "never": [
+    [
+      "win_rate",
+      "conquest",
+      "a rival winning a rival-named prompt is the expected result, not your loss"
+    ],
+    [
+      "win_rate",
+      "task",
+      "task answers rarely pick a winner; when they do it's one tool for one step: that's capture"
+    ],
+    [
+      "fact_accuracy",
+      "conquest/list/task/category",
+      "if the prompt didn't ask about you, claims about you are incidental"
+    ],
+    [
+      "negative_rate",
+      "task/category",
+      "you're barely mentioned; neutral dominates and says nothing"
+    ],
+    [
+      "position",
+      "branded",
+      "you are the subject, so position is always 1"
+    ]
+  ]
+}
