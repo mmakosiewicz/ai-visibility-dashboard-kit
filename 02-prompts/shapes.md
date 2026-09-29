@@ -110,9 +110,9 @@ Pick one, write it in the caption, and don't mix them across cards.
 **Rule of thumb: a card needs at least 5 prompts of the right shape**, or its
 worklist is a list of one-offs and its rate flips on a single answer.
 
-## The two worked examples
+## The two case studies
 
-| | SEO tools ([examples/ahrefs](../examples/ahrefs/)) | Payments ([examples/stripe](../examples/stripe/)) |
+| | SEO tools ([case study](../10-case-studies/seo-tools.md)) | Payments ([case study](../10-case-studies/payments.md)) |
 |---|---|---|
 | Prompts | 194 | 50 |
 | branded | 84 (17 comparisons) | **0** |
