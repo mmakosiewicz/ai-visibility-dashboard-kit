@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-09-29 — no sample data
+
+Agents sometimes used the shipped examples to skip the Brand Radar report. So:
+
+- **`examples/` removed.** No question lists, brand files or plans ship any
+  more. The two write-ups live on as reading-only
+  [`10-case-studies/`](10-case-studies/), with the step 0 findings summarised.
+- **Every report must name its Brand Radar report.** The report page refuses
+  measurements without a real report id (`report_id`) and prints it in the
+  footer; `propose.py` needs `--from-report`, `--report-id` or a fetch;
+  `from_measurements.py` refuses input without one.
+- **Demo data only when asked**: `--demo` / `"demo": true` labels the page
+  "made-up data" at the top and in the footer, and can't become build files.
+- `test_template.py` renders a tiny labelled fixture built inside the test,
+  and checks both refusals.
+
 ## 2026-09-29 — renamed: AI visibility dashboard kit
 
 Published under a new name, `ai-visibility-dashboard-kit`. Same content as the
